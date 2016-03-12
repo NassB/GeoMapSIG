@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">GeoMapSIG</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="welcome_app"> Convertisseur Coordonnées</string>
+
+    <string name="longitude">Longitude</string>
+    <string name="latitude">Latitude</string>
+    <string name="lati">Latitude</string>
+    <string name="longi">Longitude</string>
+
+    <string name="affichage_resultat">Le resultat est :</string>
+
+    <string name="sexagecimale">Sexagécimale</string>
+    <string name="decimal">Decimal</string>
+
+    <string name="buttonConversion">Convertir</string>
+    <string name="buttonReset">Reset</string>
+
+    <string name="degres_sexa">Degres</string>
+    <string name="minute_sexa">Minutes</string>
+    <string name="seconde_sexa">Secondes</string>
+
+    <string name="nav_app_name">GeoMapSIG</string>
+    <string name="navDescriptionApp">Convertisseur | Tableau | Carte</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
