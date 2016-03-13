@@ -1,9 +1,8 @@
 package com.nassim.geomapsig;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -19,12 +18,16 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, TableauFragment.OnFragmentInteractionListener,
+        MapsFragment.OnFragmentInteractionListener, ConversionFragment.OnFragmentInteractionListener {
+
 
     DrawerLayout mDrawer;
 
@@ -71,8 +74,6 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        setupDrawerContent(navigationView);
 
         /*****************************************************************************************************/
 
@@ -202,60 +203,6 @@ public class MainActivity extends AppCompatActivity
         buttonReset.setOnClickListener(ClickButton);
     }
 
-    private void setupDrawerContent(NavigationView navigationView) {
-        navigationView.setNavigationItemSelectedListener(
-                new NavigationView.OnNavigationItemSelectedListener() {
-                    @Override
-                    public boolean onNavigationItemSelected(MenuItem menuItem) {
-                        selectDrawerItem(menuItem);
-                        return true;
-                    }
-                });
-    }
-
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        return false;
-    }
-
-    public void selectDrawerItem(MenuItem menuItem) {
-        // Create a new fragment and specify the planet to show based on
-        // position
-        Fragment fragment = null;
-
-        Class fragmentClass;
-        switch(menuItem.getItemId()) {
-            case R.id.nav_conversion:
-                fragmentClass = ConversionFragment.class;
-                break;
-            case R.id.nav_tableau:
-                fragmentClass = TableauFragment.class;
-                break;
-            case R.id.nav_maps:
-                fragmentClass = MapsFragment.class;
-                break;
-
-            default:
-                fragmentClass = ConversionFragment.class;
-        }
-
-        try {
-            fragment = (Fragment) fragmentClass.newInstance();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        // Insert the fragment by replacing any existing fragment
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
-
-        // Highlight the selected item, update the title, and close the drawer
-        // Highlight the selected item has been done by NavigationView
-        // menuItem.setChecked(true);
-        setTitle(menuItem.getTitle());
-        mDrawer.closeDrawers();
-    }
-
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -285,4 +232,43 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        //int id = item.getItemId();
+        Class fragmentClass;
+        Fragment fragment = null;
+
+        switch(item.getItemId()) {
+            case R.id.nav_conversion:
+                fragmentClass = ConversionFragment.class;
+                break;
+            case R.id.nav_tableau:
+                fragmentClass = TableauFragment.class;
+                break;
+            case R.id.nav_maps:
+                fragmentClass = MapsFragment.class;
+                break;
+            default:
+                fragmentClass = ConversionFragment.class;
+        }
+        try {
+            fragment = (Fragment) fragmentClass.newInstance();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
+
+        setTitle(item.getTitle());
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
+    }
 }
