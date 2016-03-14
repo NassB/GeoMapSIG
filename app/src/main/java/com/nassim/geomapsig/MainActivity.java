@@ -3,58 +3,21 @@ package com.nassim.geomapsig;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.text.InputFilter;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.TextView;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, TableauFragment.OnFragmentInteractionListener,
         MapsFragment.OnFragmentInteractionListener, ConversionFragment.OnFragmentInteractionListener {
 
-
     DrawerLayout mDrawer;
-
-    private static final String degresFormat = "^([0-8]?[0-9]|90)";
-    private static final String minutesFormat = "(\\s[0-5]?[0-9]')";
-    private static final String secondesFormat = "(\\s[0-5]?[0-9](,[0-9])?\")";
-
-    Button buttonConversion, buttonReset;
-
-    TextView txtLatitude, txtLongitude;
-    TextView affichageConversionLatitude, affichageConversionLongitude;
-
-    EditText latitudeDecimal, longitudeDecimal;
-
-    public RadioGroup uniteCoordonnees;
-    public RadioButton sexagecimale, decimal;
-
-    public double textDegresLatitude, textMinutesLatitude, textSecondesLatitude;
-
-    public double textDegresLongitude, textMinutesLongitude, textSecondesLongitude;
-
-    public double textLatitude, textLongitude;
-
-    private double resultatConversionLatitude, resultatConversionLongitude;
-
-    EditText degresLatitude, minutesLatitude, secondesLatitude;
-    EditText degresLongitude, minutesLongitude, secondesLongitude;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,132 +38,6 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        /*****************************************************************************************************/
-
-        final NumberFormat formatter = new DecimalFormat("#0.000000");
-
-        buttonConversion = (Button) findViewById(R.id.Conversion);
-        buttonReset = (Button) findViewById(R.id.Reset);
-
-        uniteCoordonnees = (RadioGroup) findViewById(R.id.uniteCoordonnée);
-
-        sexagecimale = (RadioButton) findViewById(R.id.sexagecimale);
-        decimal = (RadioButton) findViewById(R.id.decimal);
-
-        txtLatitude = (TextView) findViewById(R.id.textLatitude);
-        txtLongitude = (TextView) findViewById(R.id.textLongitude);
-
-        /*****************************************************************************************************/
-
-        latitudeDecimal = (EditText) findViewById(R.id.latitude_decimal);
-        longitudeDecimal = (EditText) findViewById(R.id.longitude_decimal);
-
-        latitudeDecimal.setFilters(new InputFilter[]{new FilterActivity("0", "180")});
-        longitudeDecimal.setFilters(new InputFilter[]{new FilterActivity("0", "180")});
-
-        /*****************************************************************************************************/
-
-        degresLatitude = (EditText) findViewById(R.id.degres_latitude);
-        minutesLatitude = (EditText) findViewById(R.id.minutes_latitude);
-        secondesLatitude = (EditText) findViewById(R.id.secondes_latitude);
-
-        degresLatitude.setFilters(new InputFilter[]{new FilterActivity("0", "90")});
-        minutesLatitude.setFilters(new InputFilter[]{new FilterActivity("0", "60")});
-        secondesLatitude.setFilters(new InputFilter[]{new FilterActivity("0", "60")});
-
-        /*****************************************************************************************************/
-
-        degresLongitude = (EditText) findViewById(R.id.degres_longitude);
-        minutesLongitude = (EditText) findViewById(R.id.minutes_longitude);
-        secondesLongitude = (EditText) findViewById(R.id.secondes_longitude);
-
-        degresLongitude.setFilters(new InputFilter[]{new FilterActivity("0", "90")});
-        minutesLongitude.setFilters(new InputFilter[]{new FilterActivity("0", "60")});
-        secondesLongitude.setFilters(new InputFilter[]{new FilterActivity("0", "60")});
-
-        /*****************************************************************************************************/
-
-        affichageConversionLatitude = (TextView) findViewById(R.id.affichageResultatLatitude);
-        affichageConversionLongitude = (TextView) findViewById(R.id.affichageResultatLongitude);
-
-        final LinearLayout latitudeSexagecimal = (LinearLayout) findViewById(R.id.latitude_sexagecimal);
-        final LinearLayout longitudeSexagecimal = (LinearLayout) findViewById(R.id.longitude_sexagecimal);
-
-        /*****************************************************************************************************/
-
-        uniteCoordonnees.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                // TODO Auto-generated method stub
-                if (checkedId == R.id.sexagecimale) {
-                    latitudeSexagecimal.setVisibility(View.VISIBLE);
-                    longitudeSexagecimal.setVisibility(View.VISIBLE);
-                    latitudeDecimal.setVisibility(View.GONE);
-                    longitudeDecimal.setVisibility(View.GONE);
-
-                } else if (checkedId == R.id.decimal) {
-                    latitudeSexagecimal.setVisibility(View.GONE);
-                    longitudeSexagecimal.setVisibility(View.GONE);
-                    latitudeDecimal.setVisibility(View.VISIBLE);
-                    longitudeDecimal.setVisibility(View.VISIBLE);
-
-                }
-            }
-        });
-
-        View.OnClickListener ClickButton = new View.OnClickListener() {
-            public void onClick(View v) {
-                switch (v.getId()) {
-                    case R.id.Conversion:
-                        if (sexagecimale.isChecked()) {
-                            textDegresLatitude = Double.parseDouble(degresLatitude.getText().toString());
-                            textMinutesLatitude = Double.parseDouble(minutesLatitude.getText().toString());
-                            textSecondesLatitude = Double.parseDouble(secondesLatitude.getText().toString());
-
-                            textDegresLongitude = Double.parseDouble(degresLongitude.getText().toString());
-                            textMinutesLongitude = Double.parseDouble(minutesLongitude.getText().toString());
-                            textSecondesLongitude = Double.parseDouble(secondesLongitude.getText().toString());
-
-                            resultatConversionLatitude = textDegresLatitude + textMinutesLatitude / 60 + textSecondesLatitude / 3600;
-                            resultatConversionLongitude = textDegresLongitude + textMinutesLongitude / 60 + textSecondesLongitude / 3600;
-
-                            affichageConversionLatitude.setText(String.valueOf("Latitude : " + formatter.format(resultatConversionLatitude) + "°"));
-                            affichageConversionLongitude.setText(String.valueOf("Longitude : " + formatter.format(resultatConversionLongitude) + "°"));
-
-                        } else if (decimal.isChecked()) {
-                            textLatitude = Double.parseDouble(latitudeDecimal.getText().toString());
-                            textLongitude = Double.parseDouble(longitudeDecimal.getText().toString());
-
-
-
-                            affichageConversionLatitude.setText(String.valueOf(resultatConversionLatitude));
-                            affichageConversionLatitude.setText(String.valueOf(resultatConversionLongitude));
-                        }
-
-                        break;
-
-                    case R.id.Reset:
-                        latitudeDecimal.getText().clear();
-                        longitudeDecimal.getText().clear();
-
-                        degresLongitude.getText().clear();
-                        minutesLongitude.getText().clear();
-                        secondesLongitude.getText().clear();
-
-                        degresLatitude.getText().clear();
-                        minutesLatitude.getText().clear();
-                        secondesLatitude.getText().clear();
-
-
-                        affichageConversionLatitude.setText("");
-                        affichageConversionLongitude.setText("");
-                        break;
-
-                }
-            }
-        };
-
-        buttonConversion.setOnClickListener(ClickButton);
-        buttonReset.setOnClickListener(ClickButton);
     }
 
     @Override
@@ -238,6 +75,7 @@ public class MainActivity extends AppCompatActivity
         //int id = item.getItemId();
         Class fragmentClass;
         Fragment fragment = null;
+        FragmentManager fragmentManager = getSupportFragmentManager();
 
         switch(item.getItemId()) {
             case R.id.nav_conversion:
@@ -258,7 +96,6 @@ public class MainActivity extends AppCompatActivity
             e.printStackTrace();
         }
 
-        FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
 
         setTitle(item.getTitle());
