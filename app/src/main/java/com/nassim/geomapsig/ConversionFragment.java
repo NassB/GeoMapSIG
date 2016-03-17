@@ -3,6 +3,8 @@ package com.nassim.geomapsig;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.text.InputFilter;
 import android.view.LayoutInflater;
@@ -14,6 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -30,8 +33,6 @@ import java.text.NumberFormat;
 public class ConversionFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
     private static final String degresFormat = "^([0-8]?[0-9]|90)";
     private static final String minutesFormat = "(\\s[0-5]?[0-9]')";
@@ -59,8 +60,6 @@ public class ConversionFragment extends Fragment {
     EditText degresLongitude, minutesLongitude, secondesLongitude;
 
     // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
     private OnFragmentInteractionListener mListener;
 
@@ -80,8 +79,7 @@ public class ConversionFragment extends Fragment {
     public static ConversionFragment newInstance(String param1, String param2) {
         ConversionFragment fragment = new ConversionFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+
         fragment.setArguments(args);
         return fragment;
     }
@@ -90,11 +88,8 @@ public class ConversionFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+
         }
-
-
     }
 
     @Override
@@ -103,10 +98,25 @@ public class ConversionFragment extends Fragment {
         // Inflate the layout for this fragment
         View conversion_view = inflater.inflate(R.layout.fragment_conversion, container, false);
 
+        final FloatingActionButton fab = (FloatingActionButton) conversion_view.findViewById(R.id.fab);
+        assert fab != null;
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (sexagecimale.isChecked()) {
+                    Snackbar.make(view, "Coordonnées Sexagecimale rajouté au tableau", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                } else if (decimal.isChecked()) {
+                    Snackbar.make(view, "Coordonnées Decimale rajouté au tableau", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                }
+            }
+        });
+
         //region Proprietes
         /*****************************************************************************************************/
 
-        final NumberFormat formatter = new DecimalFormat("#0.000000");
+        final NumberFormat formatterResultatDecimal = new DecimalFormat("#0.000000");
 
         buttonConversion = (Button) conversion_view.findViewById(R.id.Conversion);
         buttonReset = (Button) conversion_view.findViewById(R.id.Reset);
@@ -181,6 +191,7 @@ public class ConversionFragment extends Fragment {
                 switch (v.getId()) {
                     case R.id.Conversion:
                         if (sexagecimale.isChecked()) {
+
                             textDegresLatitude = Double.parseDouble(degresLatitude.getText().toString());
                             textMinutesLatitude = Double.parseDouble(minutesLatitude.getText().toString());
                             textSecondesLatitude = Double.parseDouble(secondesLatitude.getText().toString());
@@ -192,16 +203,65 @@ public class ConversionFragment extends Fragment {
                             resultatConversionLatitude = textDegresLatitude + textMinutesLatitude / 60 + textSecondesLatitude / 3600;
                             resultatConversionLongitude = textDegresLongitude + textMinutesLongitude / 60 + textSecondesLongitude / 3600;
 
-                            affichageConversionLatitude.setText(String.valueOf("Latitude : " + formatter.format(resultatConversionLatitude) + "°"));
-                            affichageConversionLongitude.setText(String.valueOf("Longitude : " + formatter.format(resultatConversionLongitude) + "°"));
+                            affichageConversionLatitude.setText(String.valueOf("Latitude : " + formatterResultatDecimal.format(resultatConversionLatitude) + "°"));
+                            affichageConversionLongitude.setText(String.valueOf("Longitude : " + formatterResultatDecimal.format(resultatConversionLongitude) + "°"));
+
+                            fab.show();
 
                         } else if (decimal.isChecked()) {
-                            textLatitude = Double.parseDouble(latitudeDecimal.getText().toString());
-                            textLongitude = Double.parseDouble(longitudeDecimal.getText().toString());
 
+                            /*********************************************************************************************/
+                            textLatitude = Double.parseDouble(latitudeDecimal.getText().toString());
+                            String signlat;
+
+                            if (textLatitude < 0) {
+                                signlat = "-";
+                            } else {
+                                signlat = "";
+                            }
+
+                            textLatitude = Math.abs(Math.round(resultatConversionLatitude * 1000000.));
+                            if (textLatitude > (90 * 1000000)) {
+                                Toast.makeText(getActivity().getApplicationContext(), " Les degrés de latitude doivent être compris entre -90 et +90°.",
+                                        Toast.LENGTH_SHORT).show();
+                                resultatConversionLatitude = Double.parseDouble("");
+                                textLatitude = 0;
+                            }
+
+                            resultatConversionLatitude = Double.parseDouble(signlat + ((Math.floor(textLatitude / 1000000)) + "° "
+                                    + Math.floor(((textLatitude / 1000000) - Math.floor(textLatitude / 1000000)) * 60) + "' "
+                                    + (Math.floor(((((textLatitude / 1000000) - Math.floor(textLatitude / 1000000)) * 60)
+                                    - Math.floor(((textLatitude / 1000000) - Math.floor(textLatitude / 1000000)) * 60)) * 100000) * 60 / 100000) + "''"));
+                            /*********************************************************************************************/
+
+                            /*********************************************************************************************/
+                            textLongitude = Double.parseDouble(longitudeDecimal.getText().toString());
+                            String signlon;
+
+                            if (textLongitude < 0) {
+                                signlon = "-";
+                            } else {
+                                signlon = "";
+                            }
+
+                            textLongitude = Math.abs(Math.round(resultatConversionLongitude * 1000000.));
+                            if (textLongitude > (90 * 1000000)) {
+                                Toast.makeText(getActivity().getApplicationContext(), " Les degrés de longitude doivent être compris entre -180 et +180°",
+                                        Toast.LENGTH_SHORT).show();
+                                resultatConversionLongitude = Double.parseDouble("");
+                                textLongitude = 0;
+                            }
+
+                            resultatConversionLongitude = Double.parseDouble(signlon + ((Math.floor(textLongitude / 1000000)) + "° "
+                                    + Math.floor(((textLongitude / 1000000) - Math.floor(textLongitude / 1000000)) * 60) + "' "
+                                    + (Math.floor(((((textLongitude / 1000000) - Math.floor(textLongitude / 1000000)) * 60)
+                                    - Math.floor(((textLongitude / 1000000) - Math.floor(textLongitude / 1000000)) * 60)) * 100000) * 60 / 100000) + "''"));
 
                             affichageConversionLatitude.setText(String.valueOf(resultatConversionLatitude));
                             affichageConversionLatitude.setText(String.valueOf(resultatConversionLongitude));
+                            /*********************************************************************************************/
+
+                            fab.show();
                         }
 
                         break;
@@ -218,9 +278,10 @@ public class ConversionFragment extends Fragment {
                         minutesLatitude.getText().clear();
                         secondesLatitude.getText().clear();
 
-
                         affichageConversionLatitude.setText("");
                         affichageConversionLongitude.setText("");
+
+                        fab.hide();
                         break;
                 }
             }
@@ -261,7 +322,7 @@ public class ConversionFragment extends Fragment {
      * fragment to allow an interaction in this fragment to be communicated
      * to the activity and potentially other fragments contained in that
      * activity.
-     * <p/>
+     * <p>
      * See the Android Training lesson <a href=
      * "http://developer.android.com/training/basics/fragments/communicating.html"
      * >Communicating with Other Fragments</a> for more information.

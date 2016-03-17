@@ -41,7 +41,7 @@
         android:layout_marginTop="13dp"
         android:ems="10"
         android:hint="@string/lati"
-        android:inputType="numberDecimal">
+        android:inputType="numberSigned|numberDecimal">
 
         <requestFocus />
     </EditText>
@@ -98,7 +98,7 @@
         android:layout_marginTop="15dp"
         android:ems="10"
         android:hint="@string/longi"
-        android:inputType="numberDecimal">
+        android:inputType="numberSigned|numberDecimal">
 
         <requestFocus />
     </EditText>
@@ -214,6 +214,17 @@
         android:layout_centerHorizontal="true"
         android:ems="10"
         android:textSize="18sp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:src="@android:drawable/ic_dialog_map"
+        android:layout_alignTop="@+id/textResultat"
+        android:layout_toRightOf="@+id/uniteCoordonnée"
+        android:layout_toEndOf="@+id/uniteCoordonnée" />
 
 </RelativeLayout>
 

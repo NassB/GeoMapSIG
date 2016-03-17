@@ -30,4 +30,12 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tableau_coordonnees">Tableau Coordonnées</string>
+    <string name="villesCellule">Villes</string>
+    <string name="sexagecimaleTableau">Sexagecimale</string>
+    <string name="decimaleTableau">Decimale</string>
+    <string name="latitudeSexagecimaleTableau">Latitude</string>
+    <string name="longitudeSexagecimaleTableau">Longitude</string>
+    <string name="latitudeDecimaleTableau">Latitude</string>
+    <string name="longitudeDecimaleTableau">Longitude</string>
 </resources>
