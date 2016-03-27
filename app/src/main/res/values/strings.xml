@@ -38,4 +38,8 @@
     <string name="longitudeSexagecimaleTableau">Longitude</string>
     <string name="latitudeDecimaleTableau">Latitude</string>
     <string name="longitudeDecimaleTableau">Longitude</string>
+    <string name="welcomeMessage2">GeoMapSIG Application</string>
+    <string name="welcomeMessage1">Welcome to</string>
+    <string name="logowelcome">logoWelcome</string>
+    <string name="point_on_map">Point On Map</string>
 </resources>

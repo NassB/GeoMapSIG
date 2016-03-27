@@ -11,21 +11,22 @@
     tools:context="com.nassim.geomapsig.ConversionFragment">
 
     <TextView
-        android:id="@+id/textApp"
+        android:id="@+id/textAppConversion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:text="@string/welcome_app"
         android:textColor="#000000"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:textStyle="italic" />
 
 
     <TextView
         android:id="@+id/textLatitude"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textApp"
+        android:layout_below="@+id/textAppConversion"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:text="@string/latitude"
@@ -60,7 +61,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="@string/degres_sexa"
-            android:inputType="number|numberDecimal" />
+            android:inputType="number|numberDecimal"
+            android:text="56" />
 
         <EditText
             android:id="@+id/minutes_latitude"
@@ -68,7 +70,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="@string/minute_sexa"
-            android:inputType="number|numberDecimal" />
+            android:inputType="number|numberDecimal"
+            android:text="12" />
 
         <EditText
             android:id="@+id/secondes_latitude"
@@ -76,7 +79,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="@string/seconde_sexa"
-            android:inputType="number|numberDecimal" />
+            android:inputType="number|numberDecimal"
+            android:text="59" />
     </LinearLayout>
 
     <TextView
@@ -117,7 +121,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="@string/degres_sexa"
-            android:inputType="number|numberDecimal" />
+            android:inputType="number|numberDecimal"
+            android:text="12" />
 
         <EditText
             android:id="@+id/minutes_longitude"
@@ -125,7 +130,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="@string/minute_sexa"
-            android:inputType="number|numberDecimal" />
+            android:inputType="number|numberDecimal"
+            android:text="59" />
 
         <EditText
             android:id="@+id/secondes_longitude"
@@ -133,7 +139,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="@string/seconde_sexa"
-            android:inputType="number|numberDecimal" />
+            android:inputType="number|numberDecimal"
+            android:text="5" />
     </LinearLayout>
 
     <RadioGroup

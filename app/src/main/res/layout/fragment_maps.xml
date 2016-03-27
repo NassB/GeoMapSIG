@@ -5,13 +5,15 @@
     tools:context="com.nassim.geomapsig.MapsFragment">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/appMaps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Hello Its Map"
+        android:text="@string/point_on_map"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:textStyle="italic" />
 
 </RelativeLayout>

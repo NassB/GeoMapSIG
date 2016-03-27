@@ -21,7 +21,7 @@
             android:gravity="center"
             android:text="@string/tableau_coordonnees"
             android:textSize="18sp"
-            android:textStyle="bold" >
+            android:textStyle="bold|italic" >
         </TextView>
     </TableRow>
 
@@ -162,7 +162,7 @@
     </TableRow>
 
     <TableRow
-        android:id="@+id/tableRow4"
+        android:id="@+id/deuxiemeVilleRow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
@@ -200,63 +200,6 @@
             android:textSize="13dp">
         </TextView>
 
-    </TableRow>
-
-    <TableRow
-        android:id="@+id/tableRow5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center" >
-
-        <TextView android:textStyle="bold" >
-        </TextView>
-
-        <TextView>
-
-        </TextView>
-
-        <TextView>
-
-        </TextView>
-
-        <TextView>
-
-        </TextView>
-
-        <TextView>
-
-        </TextView>
-    </TableRow>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView3" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView4" />
-
-        <TextView
-            android:id="@+id/textView5"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView6" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView7" />
     </TableRow>
 
 </TableLayout>

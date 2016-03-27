@@ -15,12 +15,12 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
-
 
 /**
  * A simple {@link Fragment} subclass.
@@ -96,22 +96,7 @@ public class ConversionFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View conversion_view = inflater.inflate(R.layout.fragment_conversion, container, false);
-
-        final FloatingActionButton fab = (FloatingActionButton) conversion_view.findViewById(R.id.fab);
-        assert fab != null;
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (sexagecimale.isChecked()) {
-                    Snackbar.make(view, "Coordonnées Sexagecimale rajouté au tableau", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
-                } else if (decimal.isChecked()) {
-                    Snackbar.make(view, "Coordonnées Decimale rajouté au tableau", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
-                }
-            }
-        });
+        final View conversion_view = inflater.inflate(R.layout.fragment_conversion, container, false);
 
         //region Proprietes
         /*****************************************************************************************************/
@@ -168,6 +153,29 @@ public class ConversionFragment extends Fragment {
         /*****************************************************************************************************/
         //endregion
 
+        final TableLayout tableauCoordonnees = (TableLayout)conversion_view.findViewById(R.id.tableauCoordonneesLayout);
+        final TableRow newTableRowForTable = new TableRow(conversion_view.getContext());
+        final TextView newCityInTableLayout = new TextView(conversion_view.getContext());
+
+        final FloatingActionButton fab = (FloatingActionButton) conversion_view.findViewById(R.id.fab);
+        assert fab != null;
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (sexagecimale.isChecked()) {
+
+
+                    Snackbar.make(view, "Coordonnées Sexagecimale rajouté au tableau", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+
+                } else if (decimal.isChecked()) {
+
+                    Snackbar.make(view, "Coordonnées Decimale rajouté au tableau", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                }
+            }
+        });
+
         uniteCoordonnees.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 // TODO Auto-generated method stub
@@ -192,6 +200,7 @@ public class ConversionFragment extends Fragment {
                     case R.id.Conversion:
                         if (sexagecimale.isChecked()) {
 
+                            //region ConversionSexaDeci
                             textDegresLatitude = Double.parseDouble(degresLatitude.getText().toString());
                             textMinutesLatitude = Double.parseDouble(minutesLatitude.getText().toString());
                             textSecondesLatitude = Double.parseDouble(secondesLatitude.getText().toString());
@@ -205,12 +214,14 @@ public class ConversionFragment extends Fragment {
 
                             affichageConversionLatitude.setText(String.valueOf("Latitude : " + formatterResultatDecimal.format(resultatConversionLatitude) + "°"));
                             affichageConversionLongitude.setText(String.valueOf("Longitude : " + formatterResultatDecimal.format(resultatConversionLongitude) + "°"));
+                            //endregion
 
                             fab.show();
 
                         } else if (decimal.isChecked()) {
 
-                            /*********************************************************************************************/
+                            //region ConversionDeciSexa
+                            /*********************************************************************************************
                             textLatitude = Double.parseDouble(latitudeDecimal.getText().toString());
                             String signlat;
 
@@ -232,9 +243,9 @@ public class ConversionFragment extends Fragment {
                                     + Math.floor(((textLatitude / 1000000) - Math.floor(textLatitude / 1000000)) * 60) + "' "
                                     + (Math.floor(((((textLatitude / 1000000) - Math.floor(textLatitude / 1000000)) * 60)
                                     - Math.floor(((textLatitude / 1000000) - Math.floor(textLatitude / 1000000)) * 60)) * 100000) * 60 / 100000) + "''"));
-                            /*********************************************************************************************/
+                            *********************************************************************************************/
 
-                            /*********************************************************************************************/
+                            /*********************************************************************************************
                             textLongitude = Double.parseDouble(longitudeDecimal.getText().toString());
                             String signlon;
 
@@ -259,7 +270,8 @@ public class ConversionFragment extends Fragment {
 
                             affichageConversionLatitude.setText(String.valueOf(resultatConversionLatitude));
                             affichageConversionLatitude.setText(String.valueOf(resultatConversionLongitude));
-                            /*********************************************************************************************/
+                            *********************************************************************************************/
+                            //endregion
 
                             fab.show();
                         }
@@ -267,6 +279,8 @@ public class ConversionFragment extends Fragment {
                         break;
 
                     case R.id.Reset:
+
+                        //region ResetAllTextView
                         latitudeDecimal.getText().clear();
                         longitudeDecimal.getText().clear();
 
@@ -280,6 +294,7 @@ public class ConversionFragment extends Fragment {
 
                         affichageConversionLatitude.setText("");
                         affichageConversionLongitude.setText("");
+                        //endregion
 
                         fab.hide();
                         break;

@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, TableauFragment.OnFragmentInteractionListener,
@@ -78,15 +79,19 @@ public class MainActivity extends AppCompatActivity
         switch(item.getItemId()) {
             case R.id.nav_conversion:
                 fragmentClass = ConversionFragment.class;
+                findViewById(R.id.messageWelcome).setVisibility(View.GONE);
                 break;
             case R.id.nav_tableau:
                 fragmentClass = TableauFragment.class;
+                findViewById(R.id.messageWelcome).setVisibility(View.GONE);
                 break;
             case R.id.nav_maps:
                 fragmentClass = MapsFragment.class;
+                findViewById(R.id.messageWelcome).setVisibility(View.GONE);
                 break;
             default:
                 fragmentClass = ConversionFragment.class;
+                findViewById(R.id.messageWelcome).setVisibility(View.GONE);
         }
         try {
             fragment = (Fragment) fragmentClass.newInstance();
