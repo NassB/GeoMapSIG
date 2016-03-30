@@ -64,9 +64,9 @@ public class TableauFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View tableau_view = inflater.inflate(R.layout.fragment_tableau, container, false);
+        View tableauView = inflater.inflate(R.layout.fragment_tableau, container, false);
 
-        return tableau_view;
+        return tableauView;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

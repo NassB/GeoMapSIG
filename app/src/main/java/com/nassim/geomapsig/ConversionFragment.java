@@ -1,12 +1,16 @@
 package com.nassim.geomapsig;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.text.InputFilter;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -96,37 +100,38 @@ public class ConversionFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        final View conversion_view = inflater.inflate(R.layout.fragment_conversion, container, false);
+        final View conversionView = inflater.inflate(R.layout.fragment_conversion, container, false);
+        final View tableauView = inflater.inflate(R.layout.fragment_tableau, container, false);
 
         //region Proprietes
         /*****************************************************************************************************/
 
         final NumberFormat formatterResultatDecimal = new DecimalFormat("#0.000000");
 
-        buttonConversion = (Button) conversion_view.findViewById(R.id.Conversion);
-        buttonReset = (Button) conversion_view.findViewById(R.id.Reset);
+        buttonConversion = (Button) conversionView.findViewById(R.id.Conversion);
+        buttonReset = (Button) conversionView.findViewById(R.id.Reset);
 
-        uniteCoordonnees = (RadioGroup) conversion_view.findViewById(R.id.uniteCoordonnée);
+        uniteCoordonnees = (RadioGroup) conversionView.findViewById(R.id.uniteCoordonnée);
 
-        sexagecimale = (RadioButton) conversion_view.findViewById(R.id.sexagecimale);
-        decimal = (RadioButton) conversion_view.findViewById(R.id.decimal);
+        sexagecimale = (RadioButton) conversionView.findViewById(R.id.sexagecimale);
+        decimal = (RadioButton) conversionView.findViewById(R.id.decimal);
 
-        txtLatitude = (TextView) conversion_view.findViewById(R.id.textLatitude);
-        txtLongitude = (TextView) conversion_view.findViewById(R.id.textLongitude);
+        txtLatitude = (TextView) conversionView.findViewById(R.id.textLatitude);
+        txtLongitude = (TextView) conversionView.findViewById(R.id.textLongitude);
 
         /*****************************************************************************************************/
 
-        latitudeDecimal = (EditText) conversion_view.findViewById(R.id.latitude_decimal);
-        longitudeDecimal = (EditText) conversion_view.findViewById(R.id.longitude_decimal);
+        latitudeDecimal = (EditText) conversionView.findViewById(R.id.latitude_decimal);
+        longitudeDecimal = (EditText) conversionView.findViewById(R.id.longitude_decimal);
 
         latitudeDecimal.setFilters(new InputFilter[]{new FilterActivity("0", "180")});
         longitudeDecimal.setFilters(new InputFilter[]{new FilterActivity("0", "180")});
 
         /*****************************************************************************************************/
 
-        degresLatitude = (EditText) conversion_view.findViewById(R.id.degres_latitude);
-        minutesLatitude = (EditText) conversion_view.findViewById(R.id.minutes_latitude);
-        secondesLatitude = (EditText) conversion_view.findViewById(R.id.secondes_latitude);
+        degresLatitude = (EditText) conversionView.findViewById(R.id.degres_latitude);
+        minutesLatitude = (EditText) conversionView.findViewById(R.id.minutes_latitude);
+        secondesLatitude = (EditText) conversionView.findViewById(R.id.secondes_latitude);
 
         degresLatitude.setFilters(new InputFilter[]{new FilterActivity("0", "90")});
         minutesLatitude.setFilters(new InputFilter[]{new FilterActivity("0", "60")});
@@ -134,9 +139,9 @@ public class ConversionFragment extends Fragment {
 
         /*****************************************************************************************************/
 
-        degresLongitude = (EditText) conversion_view.findViewById(R.id.degres_longitude);
-        minutesLongitude = (EditText) conversion_view.findViewById(R.id.minutes_longitude);
-        secondesLongitude = (EditText) conversion_view.findViewById(R.id.secondes_longitude);
+        degresLongitude = (EditText) conversionView.findViewById(R.id.degres_longitude);
+        minutesLongitude = (EditText) conversionView.findViewById(R.id.minutes_longitude);
+        secondesLongitude = (EditText) conversionView.findViewById(R.id.secondes_longitude);
 
         degresLongitude.setFilters(new InputFilter[]{new FilterActivity("0", "90")});
         minutesLongitude.setFilters(new InputFilter[]{new FilterActivity("0", "60")});
@@ -144,26 +149,60 @@ public class ConversionFragment extends Fragment {
 
         /*****************************************************************************************************/
 
-        affichageConversionLatitude = (TextView) conversion_view.findViewById(R.id.affichageResultatLatitude);
-        affichageConversionLongitude = (TextView) conversion_view.findViewById(R.id.affichageResultatLongitude);
+        affichageConversionLatitude = (TextView) conversionView.findViewById(R.id.affichageResultatLatitude);
+        affichageConversionLongitude = (TextView) conversionView.findViewById(R.id.affichageResultatLongitude);
 
-        final LinearLayout latitudeSexagecimal = (LinearLayout) conversion_view.findViewById(R.id.latitude_sexagecimal);
-        final LinearLayout longitudeSexagecimal = (LinearLayout) conversion_view.findViewById(R.id.longitude_sexagecimal);
+        final LinearLayout latitudeSexagecimal = (LinearLayout) conversionView.findViewById(R.id.latitude_sexagecimal);
+        final LinearLayout longitudeSexagecimal = (LinearLayout) conversionView.findViewById(R.id.longitude_sexagecimal);
 
         /*****************************************************************************************************/
         //endregion
 
-        final TableLayout tableauCoordonnees = (TableLayout)conversion_view.findViewById(R.id.tableauCoordonneesLayout);
-        final TableRow newTableRowForTable = new TableRow(conversion_view.getContext());
-        final TextView newCityInTableLayout = new TextView(conversion_view.getContext());
-
-        final FloatingActionButton fab = (FloatingActionButton) conversion_view.findViewById(R.id.fab);
+        final FloatingActionButton fab = (FloatingActionButton) conversionView.findViewById(R.id.fab);
         assert fab != null;
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (sexagecimale.isChecked()) {
 
+                    final EditText input = new EditText(getActivity());
+                    LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                            LinearLayout.LayoutParams.MATCH_PARENT,
+                            LinearLayout.LayoutParams.MATCH_PARENT);
+                    input.setLayoutParams(lp);
+
+                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                    alertDialog.setTitle("Ajout nouvelle ville");
+                    alertDialog.setMessage("Entrer nom de la ville");
+                    alertDialog.setView(input);
+
+                    alertDialog.setPositiveButton("YES",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+
+                                    TableLayout tableauCoordonnees = (TableLayout)tableauView.findViewById(R.id.tableauCoordonneesLayout);
+                                    TableRow newTableRowForTable = new TableRow(getActivity());
+                                    newTableRowForTable.setLayoutParams(new TableRow.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+
+                                    TextView newCityInTableLayout = new TextView(getActivity());
+                                    String newCity = input.getText().toString();
+
+                                    newCityInTableLayout.setText(newCity);
+                                    newCityInTableLayout.setTextColor(Color.BLACK);
+                                    newCityInTableLayout.setGravity(Gravity.CENTER);
+                                    newTableRowForTable.addView(newCityInTableLayout);
+                                    tableauCoordonnees.addView(newTableRowForTable);
+                                }
+                            });
+
+                    alertDialog.setNegativeButton("Cancel",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.cancel();
+                                }
+                            });
+
+                    alertDialog.show();
 
                     Snackbar.make(view, "Coordonnées Sexagecimale rajouté au tableau", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
@@ -305,8 +344,14 @@ public class ConversionFragment extends Fragment {
         buttonConversion.setOnClickListener(ClickButton);
         buttonReset.setOnClickListener(ClickButton);
 
-        return conversion_view;
+        return conversionView;
     }
+
+    /*public void onActivityCreated(Bundle bundle){
+        Bundle bundleToTableau = new Bundle();
+        bundleToTableau.putString();
+        TableauFragment.setArguments(bundle);
+    }*/
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
