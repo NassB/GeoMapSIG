@@ -2,7 +2,7 @@ package com.nassim.geomapsig;
 
 import android.content.Context;
 import android.content.DialogInterface;
-import android.graphics.Color;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -10,7 +10,6 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.text.InputFilter;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,8 +18,6 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TableLayout;
-import android.widget.TableRow;
 import android.widget.TextView;
 
 import java.text.DecimalFormat;
@@ -101,7 +98,6 @@ public class ConversionFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         final View conversionView = inflater.inflate(R.layout.fragment_conversion, container, false);
-        final View tableauView = inflater.inflate(R.layout.fragment_tableau, container, false);
 
         //region Proprietes
         /*****************************************************************************************************/
@@ -179,19 +175,12 @@ public class ConversionFragment extends Fragment {
                     alertDialog.setPositiveButton("YES",
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
-
-                                    TableLayout tableauCoordonnees = (TableLayout)tableauView.findViewById(R.id.tableauCoordonneesLayout);
-                                    TableRow newTableRowForTable = new TableRow(getActivity());
-                                    newTableRowForTable.setLayoutParams(new TableRow.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-
-                                    TextView newCityInTableLayout = new TextView(getActivity());
                                     String newCity = input.getText().toString();
 
-                                    newCityInTableLayout.setText(newCity);
-                                    newCityInTableLayout.setTextColor(Color.BLACK);
-                                    newCityInTableLayout.setGravity(Gravity.CENTER);
-                                    newTableRowForTable.addView(newCityInTableLayout);
-                                    tableauCoordonnees.addView(newTableRowForTable);
+                                    Intent intent = new Intent(getActivity().getBaseContext(),
+                                            ConversionActivity.class);
+                                    intent.putExtra("city", newCity);
+
                                 }
                             });
 
@@ -346,12 +335,6 @@ public class ConversionFragment extends Fragment {
 
         return conversionView;
     }
-
-    /*public void onActivityCreated(Bundle bundle){
-        Bundle bundleToTableau = new Bundle();
-        bundleToTableau.putString();
-        TableauFragment.setArguments(bundle);
-    }*/
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {

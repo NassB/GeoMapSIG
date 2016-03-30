@@ -48,6 +48,8 @@ public class TableauFragment extends Fragment {
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
+
+
         return fragment;
     }
 
@@ -58,6 +60,7 @@ public class TableauFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
@@ -65,6 +68,7 @@ public class TableauFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View tableauView = inflater.inflate(R.layout.fragment_tableau, container, false);
+
 
         return tableauView;
     }

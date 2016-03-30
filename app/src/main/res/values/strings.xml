@@ -42,4 +42,6 @@
     <string name="welcomeMessage1">Welcome to</string>
     <string name="logowelcome">logoWelcome</string>
     <string name="point_on_map">Point On Map</string>
+    <string name="title_activity_conversion">Conversion</string>
+    <string name="title_activity_tableau">Tableau</string>
 </resources>
