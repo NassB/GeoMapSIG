@@ -158,7 +158,7 @@ public class ConversionFragment extends Fragment {
         assert fab != null;
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(final View view) {
                 if (sexagecimale.isChecked()) {
 
                     final EditText input = new EditText(getActivity());
@@ -181,6 +181,9 @@ public class ConversionFragment extends Fragment {
                                             ConversionActivity.class);
                                     intent.putExtra("city", newCity);
 
+                                    Snackbar.make(view, "Coordonnées Sexagecimale rajouté au tableau", Snackbar.LENGTH_LONG)
+                                            .setAction("Action", null).show();
+
                                 }
                             });
 
@@ -188,18 +191,53 @@ public class ConversionFragment extends Fragment {
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
                                     dialog.cancel();
+                                    Snackbar.make(view, "Ajout annulé", Snackbar.LENGTH_LONG)
+                                            .setAction("Action", null).show();
                                 }
                             });
 
                     alertDialog.show();
 
-                    Snackbar.make(view, "Coordonnées Sexagecimale rajouté au tableau", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
-
                 } else if (decimal.isChecked()) {
 
-                    Snackbar.make(view, "Coordonnées Decimale rajouté au tableau", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
+                    final EditText input = new EditText(getActivity());
+                    LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                            LinearLayout.LayoutParams.MATCH_PARENT,
+                            LinearLayout.LayoutParams.MATCH_PARENT);
+                    input.setLayoutParams(lp);
+
+                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                    alertDialog.setTitle("Ajout nouvelle ville");
+                    alertDialog.setMessage("Entrer nom de la ville");
+                    alertDialog.setView(input);
+
+                    alertDialog.setPositiveButton("YES",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    String newCity = input.getText().toString();
+
+                                    Intent intent = new Intent(getActivity().getBaseContext(),
+                                            ConversionActivity.class);
+                                    intent.putExtra("city", newCity);
+
+                                    Snackbar.make(view, "Coordonnées Decimale rajouté au tableau", Snackbar.LENGTH_LONG)
+                                            .setAction("Action", null).show();
+
+                                }
+                            });
+
+                    alertDialog.setNegativeButton("Cancel",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.cancel();
+
+                                    Snackbar.make(view, "Ajout annulé", Snackbar.LENGTH_LONG)
+                                            .setAction("Action", null).show();
+                                }
+                            });
+
+                    alertDialog.show();
+
                 }
             }
         });
@@ -223,6 +261,7 @@ public class ConversionFragment extends Fragment {
         });
 
         View.OnClickListener ClickButton = new View.OnClickListener() {
+
             public void onClick(View v) {
                 switch (v.getId()) {
                     case R.id.Conversion:
@@ -249,59 +288,31 @@ public class ConversionFragment extends Fragment {
                         } else if (decimal.isChecked()) {
 
                             //region ConversionDeciSexa
-                            /*********************************************************************************************
+
                             textLatitude = Double.parseDouble(latitudeDecimal.getText().toString());
-                            String signlat;
-
-                            if (textLatitude < 0) {
-                                signlat = "-";
-                            } else {
-                                signlat = "";
-                            }
-
-                            textLatitude = Math.abs(Math.round(resultatConversionLatitude * 1000000.));
-                            if (textLatitude > (90 * 1000000)) {
-                                Toast.makeText(getActivity().getApplicationContext(), " Les degrés de latitude doivent être compris entre -90 et +90°.",
-                                        Toast.LENGTH_SHORT).show();
-                                resultatConversionLatitude = Double.parseDouble("");
-                                textLatitude = 0;
-                            }
-
-                            resultatConversionLatitude = Double.parseDouble(signlat + ((Math.floor(textLatitude / 1000000)) + "° "
-                                    + Math.floor(((textLatitude / 1000000) - Math.floor(textLatitude / 1000000)) * 60) + "' "
-                                    + (Math.floor(((((textLatitude / 1000000) - Math.floor(textLatitude / 1000000)) * 60)
-                                    - Math.floor(((textLatitude / 1000000) - Math.floor(textLatitude / 1000000)) * 60)) * 100000) * 60 / 100000) + "''"));
-                            *********************************************************************************************/
-
-                            /*********************************************************************************************
                             textLongitude = Double.parseDouble(longitudeDecimal.getText().toString());
-                            String signlon;
 
-                            if (textLongitude < 0) {
-                                signlon = "-";
-                            } else {
-                                signlon = "";
-                            }
+                            double tmpLatitude = textLatitude;                      // 45,21548
+                            int degresLat = (int) tmpLatitude;			    // -> 45 degrés
+                            tmpLatitude = (tmpLatitude - degresLat) * 60;		// 0,21548 * 60 = 12,9288
+                            int minLatitude = (int) tmpLatitude;			    // -> 12 minutes
+                            tmpLatitude = (tmpLatitude - minLatitude) * 60;		// 0,9288 * 60 = 55,728
+                            double secondsLatitude = tmpLatitude;					    // -> 55,728 secondes
 
-                            textLongitude = Math.abs(Math.round(resultatConversionLongitude * 1000000.));
-                            if (textLongitude > (90 * 1000000)) {
-                                Toast.makeText(getActivity().getApplicationContext(), " Les degrés de longitude doivent être compris entre -180 et +180°",
-                                        Toast.LENGTH_SHORT).show();
-                                resultatConversionLongitude = Double.parseDouble("");
-                                textLongitude = 0;
-                            }
+                            double tmpLongitude = textLongitude;            // 45,21548
+                            int degresLong = (int) tmpLongitude;			    // -> 45 degrés
+                            tmpLongitude = (tmpLongitude - degresLong) * 60;	// 0,21548 * 60 = 12,9288
+                            int minLongitude = (int) tmpLongitude;			    // -> 12 minutes
+                            tmpLongitude = (tmpLongitude - minLongitude) * 60;	// 0,9288 * 60 = 55,728
+                            double secondsLongitude = tmpLongitude;					// -> 55,728 secondes
 
-                            resultatConversionLongitude = Double.parseDouble(signlon + ((Math.floor(textLongitude / 1000000)) + "° "
-                                    + Math.floor(((textLongitude / 1000000) - Math.floor(textLongitude / 1000000)) * 60) + "' "
-                                    + (Math.floor(((((textLongitude / 1000000) - Math.floor(textLongitude / 1000000)) * 60)
-                                    - Math.floor(((textLongitude / 1000000) - Math.floor(textLongitude / 1000000)) * 60)) * 100000) * 60 / 100000) + "''"));
-
-                            affichageConversionLatitude.setText(String.valueOf(resultatConversionLatitude));
-                            affichageConversionLatitude.setText(String.valueOf(resultatConversionLongitude));
-                            *********************************************************************************************/
+                            affichageConversionLatitude.setText(String.valueOf("Latitude : " + degresLat + "° " + minLatitude + "' " + Math.floor(secondsLatitude * 10000) / 10000 + "\"" ));
+                            affichageConversionLongitude.setText(String.valueOf("Longitude : " + degresLong + "° " + minLongitude + "' " + Math.floor(secondsLongitude * 10000) / 10000 + "\"" ));
                             //endregion
 
                             fab.show();
+                            //endregion
+
                         }
 
                         break;
