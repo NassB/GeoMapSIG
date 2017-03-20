@@ -1,46 +1,110 @@
 [
     {
-        "merged": "/Users/iem/Desktop/GeoMapSIG/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml",
-        "source": "/Users/iem/Desktop/GeoMapSIG/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/color/abc_secondary_text_material_dark.xml"
+        "merged": "E:\\Android_Java\\GeoMapSIG\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_google_signin_btn_tint.xml",
+        "source": "C:\\Users\\nassim\\.android\\build-cache\\0c86e3c52284cfb71dc53cd0f08b24b2dcfc3e3f\\output\\res\\color\\common_google_signin_btn_tint.xml"
     },
     {
-        "merged": "/Users/iem/Desktop/GeoMapSIG/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml",
-        "source": "/Users/iem/Desktop/GeoMapSIG/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/color/abc_primary_text_material_light.xml"
+        "merged": "E:\\Android_Java\\GeoMapSIG\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_disable_only_material_dark.xml",
+        "source": "C:\\Users\\nassim\\.android\\build-cache\\e802dc3c1010299652e8d299dd9d3fe2b6dd8731\\output\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
     },
     {
-        "merged": "/Users/iem/Desktop/GeoMapSIG/app/build/intermediates/res/merged/debug/color/abc_background_cache_hint_selector_material_dark.xml",
-        "source": "/Users/iem/Desktop/GeoMapSIG/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/color/abc_background_cache_hint_selector_material_dark.xml"
+        "merged": "E:\\Android_Java\\GeoMapSIG\\app\\build\\intermediates\\res\\merged\\debug\\color\\switch_thumb_material_light.xml",
+        "source": "C:\\Users\\nassim\\.android\\build-cache\\e802dc3c1010299652e8d299dd9d3fe2b6dd8731\\output\\res\\color\\switch_thumb_material_light.xml"
     },
     {
-        "merged": "/Users/iem/Desktop/GeoMapSIG/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml",
-        "source": "/Users/iem/Desktop/GeoMapSIG/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/color/abc_secondary_text_material_light.xml"
+        "merged": "E:\\Android_Java\\GeoMapSIG\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_default.xml",
+        "source": "C:\\Users\\nassim\\.android\\build-cache\\e802dc3c1010299652e8d299dd9d3fe2b6dd8731\\output\\res\\color\\abc_tint_default.xml"
     },
     {
-        "merged": "/Users/iem/Desktop/GeoMapSIG/app/build/intermediates/res/merged/debug/color/abc_background_cache_hint_selector_material_light.xml",
-        "source": "/Users/iem/Desktop/GeoMapSIG/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/color/abc_background_cache_hint_selector_material_light.xml"
+        "merged": "E:\\Android_Java\\GeoMapSIG\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_spinner.xml",
+        "source": "C:\\Users\\nassim\\.android\\build-cache\\e802dc3c1010299652e8d299dd9d3fe2b6dd8731\\output\\res\\color\\abc_tint_spinner.xml"
     },
     {
-        "merged": "/Users/iem/Desktop/GeoMapSIG/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml",
-        "source": "/Users/iem/Desktop/GeoMapSIG/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/color/abc_primary_text_material_dark.xml"
+        "merged": "E:\\Android_Java\\GeoMapSIG\\app\\build\\intermediates\\res\\merged\\debug\\color\\design_tint_password_toggle.xml",
+        "source": "C:\\Users\\nassim\\.android\\build-cache\\92e9c37ee2fe0b9fc162e8ec3cb929d265706303\\output\\res\\color\\design_tint_password_toggle.xml"
     },
     {
-        "merged": "/Users/iem/Desktop/GeoMapSIG/app/build/intermediates/res/merged/debug/color/switch_thumb_material_dark.xml",
-        "source": "/Users/iem/Desktop/GeoMapSIG/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/color/switch_thumb_material_dark.xml"
+        "merged": "E:\\Android_Java\\GeoMapSIG\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_btn_colored_borderless_text_material.xml",
+        "source": "C:\\Users\\nassim\\.android\\build-cache\\e802dc3c1010299652e8d299dd9d3fe2b6dd8731\\output\\res\\color\\abc_btn_colored_borderless_text_material.xml"
     },
     {
-        "merged": "/Users/iem/Desktop/GeoMapSIG/app/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml",
-        "source": "/Users/iem/Desktop/GeoMapSIG/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/color/switch_thumb_material_light.xml"
+        "merged": "E:\\Android_Java\\GeoMapSIG\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_dark.xml",
+        "source": "C:\\Users\\nassim\\.android\\build-cache\\e802dc3c1010299652e8d299dd9d3fe2b6dd8731\\output\\res\\color\\abc_secondary_text_material_dark.xml"
     },
     {
-        "merged": "/Users/iem/Desktop/GeoMapSIG/app/build/intermediates/res/merged/debug/color/abc_search_url_text.xml",
-        "source": "/Users/iem/Desktop/GeoMapSIG/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/color/abc_search_url_text.xml"
+        "merged": "E:\\Android_Java\\GeoMapSIG\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_edittext.xml",
+        "source": "C:\\Users\\nassim\\.android\\build-cache\\e802dc3c1010299652e8d299dd9d3fe2b6dd8731\\output\\res\\color\\abc_tint_edittext.xml"
     },
     {
-        "merged": "/Users/iem/Desktop/GeoMapSIG/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml",
-        "source": "/Users/iem/Desktop/GeoMapSIG/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/color/abc_primary_text_disable_only_material_light.xml"
+        "merged": "E:\\Android_Java\\GeoMapSIG\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_btn_checkable.xml",
+        "source": "C:\\Users\\nassim\\.android\\build-cache\\e802dc3c1010299652e8d299dd9d3fe2b6dd8731\\output\\res\\color\\abc_tint_btn_checkable.xml"
     },
     {
-        "merged": "/Users/iem/Desktop/GeoMapSIG/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
-        "source": "/Users/iem/Desktop/GeoMapSIG/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/color/abc_primary_text_disable_only_material_dark.xml"
+        "merged": "E:\\Android_Java\\GeoMapSIG\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_btn_colored_text_material.xml",
+        "source": "C:\\Users\\nassim\\.android\\build-cache\\e802dc3c1010299652e8d299dd9d3fe2b6dd8731\\output\\res\\color\\abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "E:\\Android_Java\\GeoMapSIG\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_material_dark.xml",
+        "source": "C:\\Users\\nassim\\.android\\build-cache\\e802dc3c1010299652e8d299dd9d3fe2b6dd8731\\output\\res\\color\\abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "E:\\Android_Java\\GeoMapSIG\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_switch_track.xml",
+        "source": "C:\\Users\\nassim\\.android\\build-cache\\e802dc3c1010299652e8d299dd9d3fe2b6dd8731\\output\\res\\color\\abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "E:\\Android_Java\\GeoMapSIG\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_google_signin_btn_text_light.xml",
+        "source": "C:\\Users\\nassim\\.android\\build-cache\\0c86e3c52284cfb71dc53cd0f08b24b2dcfc3e3f\\output\\res\\color\\common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "E:\\Android_Java\\GeoMapSIG\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_material_light.xml",
+        "source": "C:\\Users\\nassim\\.android\\build-cache\\e802dc3c1010299652e8d299dd9d3fe2b6dd8731\\output\\res\\color\\abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "E:\\Android_Java\\GeoMapSIG\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_light.xml",
+        "source": "C:\\Users\\nassim\\.android\\build-cache\\e802dc3c1010299652e8d299dd9d3fe2b6dd8731\\output\\res\\color\\abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "E:\\Android_Java\\GeoMapSIG\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_disable_only_material_light.xml",
+        "source": "C:\\Users\\nassim\\.android\\build-cache\\e802dc3c1010299652e8d299dd9d3fe2b6dd8731\\output\\res\\color\\abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "E:\\Android_Java\\GeoMapSIG\\app\\build\\intermediates\\res\\merged\\debug\\color\\wallet_primary_text_holo_light.xml",
+        "source": "C:\\Users\\nassim\\.android\\build-cache\\cbcc5314a7db651b65f50f8f80d695e64ea3b623\\output\\res\\color\\wallet_primary_text_holo_light.xml"
+    },
+    {
+        "merged": "E:\\Android_Java\\GeoMapSIG\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_google_signin_btn_text_dark.xml",
+        "source": "C:\\Users\\nassim\\.android\\build-cache\\0c86e3c52284cfb71dc53cd0f08b24b2dcfc3e3f\\output\\res\\color\\common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "E:\\Android_Java\\GeoMapSIG\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_hint_foreground_material_dark.xml",
+        "source": "C:\\Users\\nassim\\.android\\build-cache\\e802dc3c1010299652e8d299dd9d3fe2b6dd8731\\output\\res\\color\\abc_hint_foreground_material_dark.xml"
+    },
+    {
+        "merged": "E:\\Android_Java\\GeoMapSIG\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_hint_foreground_material_light.xml",
+        "source": "C:\\Users\\nassim\\.android\\build-cache\\e802dc3c1010299652e8d299dd9d3fe2b6dd8731\\output\\res\\color\\abc_hint_foreground_material_light.xml"
+    },
+    {
+        "merged": "E:\\Android_Java\\GeoMapSIG\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_switch_thumb.xml",
+        "source": "C:\\Users\\nassim\\.android\\build-cache\\e802dc3c1010299652e8d299dd9d3fe2b6dd8731\\output\\res\\color\\abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "E:\\Android_Java\\GeoMapSIG\\app\\build\\intermediates\\res\\merged\\debug\\color\\design_error.xml",
+        "source": "C:\\Users\\nassim\\.android\\build-cache\\92e9c37ee2fe0b9fc162e8ec3cb929d265706303\\output\\res\\color\\design_error.xml"
+    },
+    {
+        "merged": "E:\\Android_Java\\GeoMapSIG\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_search_url_text.xml",
+        "source": "C:\\Users\\nassim\\.android\\build-cache\\e802dc3c1010299652e8d299dd9d3fe2b6dd8731\\output\\res\\color\\abc_search_url_text.xml"
+    },
+    {
+        "merged": "E:\\Android_Java\\GeoMapSIG\\app\\build\\intermediates\\res\\merged\\debug\\color\\switch_thumb_material_dark.xml",
+        "source": "C:\\Users\\nassim\\.android\\build-cache\\e802dc3c1010299652e8d299dd9d3fe2b6dd8731\\output\\res\\color\\switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "E:\\Android_Java\\GeoMapSIG\\app\\build\\intermediates\\res\\merged\\debug\\color\\wallet_secondary_text_holo_dark.xml",
+        "source": "C:\\Users\\nassim\\.android\\build-cache\\cbcc5314a7db651b65f50f8f80d695e64ea3b623\\output\\res\\color\\wallet_secondary_text_holo_dark.xml"
+    },
+    {
+        "merged": "E:\\Android_Java\\GeoMapSIG\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_seek_thumb.xml",
+        "source": "C:\\Users\\nassim\\.android\\build-cache\\e802dc3c1010299652e8d299dd9d3fe2b6dd8731\\output\\res\\color\\abc_tint_seek_thumb.xml"
     }
 ]

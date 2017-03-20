@@ -2,7 +2,6 @@ package com.nassim.geomapsig;
 
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -10,6 +9,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.text.InputFilter;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,14 +21,15 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import java.text.DecimalFormat;
-import java.text.NumberFormat;
+import java.text.DecimalFormatSymbols;
+import java.util.Locale;
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
  * {@link ConversionFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link ConversionFragment#newInstance} factory method to
+ * Use the {@link ConversionFragment#//newInstance} factory method to
  * create an instance of this fragment.
  */
 public class ConversionFragment extends Fragment {
@@ -38,29 +39,18 @@ public class ConversionFragment extends Fragment {
     private static final String degresFormat = "^([0-8]?[0-9]|90)";
     private static final String minutesFormat = "(\\s[0-5]?[0-9]')";
     private static final String secondesFormat = "(\\s[0-5]?[0-9](,[0-9])?\")";
-
-    Button buttonConversion, buttonReset;
-
-    TextView txtLatitude, txtLongitude;
-    TextView affichageConversionLatitude, affichageConversionLongitude;
-
-    EditText latitudeDecimal, longitudeDecimal;
-
     public RadioGroup uniteCoordonnees;
     public RadioButton sexagecimale, decimal;
-
     public double textDegresLatitude, textMinutesLatitude, textSecondesLatitude;
-
     public double textDegresLongitude, textMinutesLongitude, textSecondesLongitude;
-
     public double textLatitude, textLongitude;
-
+    private TextView affichageConversionLatitude, affichageConversionLongitude;
+    private String latitudeCity, longitudeCity, cityName;
+    private EditText latitudeDecimal, longitudeDecimal;
     private double resultatConversionLatitude, resultatConversionLongitude;
 
-    EditText degresLatitude, minutesLatitude, secondesLatitude;
-    EditText degresLongitude, minutesLongitude, secondesLongitude;
-
-    // TODO: Rename and change types of parameters
+    private EditText degresLatitude, minutesLatitude, secondesLatitude;
+    private EditText degresLongitude, minutesLongitude, secondesLongitude;
 
     private OnFragmentInteractionListener mListener;
 
@@ -68,29 +58,9 @@ public class ConversionFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment ConversionFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static ConversionFragment newInstance(String param1, String param2) {
-        ConversionFragment fragment = new ConversionFragment();
-        Bundle args = new Bundle();
-
-        fragment.setArguments(args);
-        return fragment;
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-
-        }
     }
 
     @Override
@@ -99,21 +69,21 @@ public class ConversionFragment extends Fragment {
         // Inflate the layout for this fragment
         final View conversionView = inflater.inflate(R.layout.fragment_conversion, container, false);
 
+        //final NumberFormat format = NumberFormat.getInstance(Locale.FRANCE);
+
         //region Proprietes
         /*****************************************************************************************************/
 
-        final NumberFormat formatterResultatDecimal = new DecimalFormat("#0.000000");
+        final DecimalFormat formatterResultatDecimal = new DecimalFormat("#0.000000", new DecimalFormatSymbols(Locale.ENGLISH));
+                //DecimalFormat("#0.000000");
 
-        buttonConversion = (Button) conversionView.findViewById(R.id.Conversion);
-        buttonReset = (Button) conversionView.findViewById(R.id.Reset);
+        Button buttonConversion = (Button) conversionView.findViewById(R.id.Conversion);
+        Button buttonReset = (Button) conversionView.findViewById(R.id.Reset);
 
         uniteCoordonnees = (RadioGroup) conversionView.findViewById(R.id.uniteCoordonnée);
 
         sexagecimale = (RadioButton) conversionView.findViewById(R.id.sexagecimale);
         decimal = (RadioButton) conversionView.findViewById(R.id.decimal);
-
-        txtLatitude = (TextView) conversionView.findViewById(R.id.textLatitude);
-        txtLongitude = (TextView) conversionView.findViewById(R.id.textLongitude);
 
         /*****************************************************************************************************/
 
@@ -143,7 +113,7 @@ public class ConversionFragment extends Fragment {
         minutesLongitude.setFilters(new InputFilter[]{new FilterActivity("0", "60")});
         secondesLongitude.setFilters(new InputFilter[]{new FilterActivity("0", "60")});
 
-        /*****************************************************************************************************/
+        /***************************************************************************************************/
 
         affichageConversionLatitude = (TextView) conversionView.findViewById(R.id.affichageResultatLatitude);
         affichageConversionLongitude = (TextView) conversionView.findViewById(R.id.affichageResultatLongitude);
@@ -160,84 +130,11 @@ public class ConversionFragment extends Fragment {
             @Override
             public void onClick(final View view) {
                 if (sexagecimale.isChecked()) {
-
-                    final EditText input = new EditText(getActivity());
-                    LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-                            LinearLayout.LayoutParams.MATCH_PARENT,
-                            LinearLayout.LayoutParams.MATCH_PARENT);
-                    input.setLayoutParams(lp);
-
-                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
-                    alertDialog.setTitle("Ajout nouvelle ville");
-                    alertDialog.setMessage("Entrer nom de la ville");
-                    alertDialog.setView(input);
-
-                    alertDialog.setPositiveButton("YES",
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {
-                                    String newCity = input.getText().toString();
-
-                                    Intent intent = new Intent(getActivity().getBaseContext(),
-                                            ConversionActivity.class);
-                                    intent.putExtra("city", newCity);
-
-                                    Snackbar.make(view, "Coordonnées Sexagecimale rajouté au tableau", Snackbar.LENGTH_LONG)
-                                            .setAction("Action", null).show();
-
-                                }
-                            });
-
-                    alertDialog.setNegativeButton("Cancel",
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {
-                                    dialog.cancel();
-                                    Snackbar.make(view, "Ajout annulé", Snackbar.LENGTH_LONG)
-                                            .setAction("Action", null).show();
-                                }
-                            });
-
-                    alertDialog.show();
-
+                    final EditText inputCitySexgecimal = new EditText(getActivity());
+                    CustomAlertDialog(inputCitySexgecimal);
                 } else if (decimal.isChecked()) {
-
-                    final EditText input = new EditText(getActivity());
-                    LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-                            LinearLayout.LayoutParams.MATCH_PARENT,
-                            LinearLayout.LayoutParams.MATCH_PARENT);
-                    input.setLayoutParams(lp);
-
-                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
-                    alertDialog.setTitle("Ajout nouvelle ville");
-                    alertDialog.setMessage("Entrer nom de la ville");
-                    alertDialog.setView(input);
-
-                    alertDialog.setPositiveButton("YES",
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {
-                                    String newCity = input.getText().toString();
-
-                                    Intent intent = new Intent(getActivity().getBaseContext(),
-                                            ConversionActivity.class);
-                                    intent.putExtra("city", newCity);
-
-                                    Snackbar.make(view, "Coordonnées Decimale rajouté au tableau", Snackbar.LENGTH_LONG)
-                                            .setAction("Action", null).show();
-
-                                }
-                            });
-
-                    alertDialog.setNegativeButton("Cancel",
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {
-                                    dialog.cancel();
-
-                                    Snackbar.make(view, "Ajout annulé", Snackbar.LENGTH_LONG)
-                                            .setAction("Action", null).show();
-                                }
-                            });
-
-                    alertDialog.show();
-
+                    final EditText inputCityDecimal = new EditText(getActivity());
+                    CustomAlertDialog(inputCityDecimal);
                 }
             }
         });
@@ -268,6 +165,7 @@ public class ConversionFragment extends Fragment {
                         if (sexagecimale.isChecked()) {
 
                             //region ConversionSexaDeci
+
                             textDegresLatitude = Double.parseDouble(degresLatitude.getText().toString());
                             textMinutesLatitude = Double.parseDouble(minutesLatitude.getText().toString());
                             textSecondesLatitude = Double.parseDouble(secondesLatitude.getText().toString());
@@ -279,9 +177,14 @@ public class ConversionFragment extends Fragment {
                             resultatConversionLatitude = textDegresLatitude + textMinutesLatitude / 60 + textSecondesLatitude / 3600;
                             resultatConversionLongitude = textDegresLongitude + textMinutesLongitude / 60 + textSecondesLongitude / 3600;
 
-                            affichageConversionLatitude.setText(String.valueOf("Latitude : " + formatterResultatDecimal.format(resultatConversionLatitude) + "°"));
-                            affichageConversionLongitude.setText(String.valueOf("Longitude : " + formatterResultatDecimal.format(resultatConversionLongitude) + "°"));
+                            String LatitudeFromSexa = String.valueOf(formatterResultatDecimal.format(resultatConversionLatitude));
+                            String LongitudeFromSexa = String.valueOf(formatterResultatDecimal.format(resultatConversionLongitude));
+                            affichageConversionLatitude.setText(LatitudeFromSexa + "°");
+                            affichageConversionLongitude.setText(LongitudeFromSexa + "°");
                             //endregion
+
+                            latitudeCity = LatitudeFromSexa;
+                            longitudeCity = LongitudeFromSexa;
 
                             fab.show();
 
@@ -292,27 +195,29 @@ public class ConversionFragment extends Fragment {
                             textLatitude = Double.parseDouble(latitudeDecimal.getText().toString());
                             textLongitude = Double.parseDouble(longitudeDecimal.getText().toString());
 
-                            double tmpLatitude = textLatitude;                      // 45,21548
-                            int degresLat = (int) tmpLatitude;			    // -> 45 degrés
-                            tmpLatitude = (tmpLatitude - degresLat) * 60;		// 0,21548 * 60 = 12,9288
-                            int minLatitude = (int) tmpLatitude;			    // -> 12 minutes
-                            tmpLatitude = (tmpLatitude - minLatitude) * 60;		// 0,9288 * 60 = 55,728
-                            double secondsLatitude = tmpLatitude;					    // -> 55,728 secondes
+                            double tmpLatitude = textLatitude;                  // 45,21548
+                            int degresLat = (int) tmpLatitude;                  // -> 45 degrés
+                            tmpLatitude = (tmpLatitude - degresLat) * 60;       // 0,21548 * 60 = 12,9288
+                            int minLatitude = (int) tmpLatitude;                // -> 12 minutes
+                            tmpLatitude = (tmpLatitude - minLatitude) * 60;     // 0,9288 * 60 = 55,728
+                            double secondsLatitude = tmpLatitude;               // -> 55,728 secondes
 
-                            double tmpLongitude = textLongitude;            // 45,21548
-                            int degresLong = (int) tmpLongitude;			    // -> 45 degrés
-                            tmpLongitude = (tmpLongitude - degresLong) * 60;	// 0,21548 * 60 = 12,9288
-                            int minLongitude = (int) tmpLongitude;			    // -> 12 minutes
-                            tmpLongitude = (tmpLongitude - minLongitude) * 60;	// 0,9288 * 60 = 55,728
-                            double secondsLongitude = tmpLongitude;					// -> 55,728 secondes
+                            double tmpLongitude = textLongitude;                 // 45,21548
+                            int degresLong = (int) tmpLongitude;                 // -> 45 degrés
+                            tmpLongitude = (tmpLongitude - degresLong) * 60;     // 0,21548 * 60 = 12,9288
+                            int minLongitude = (int) tmpLongitude;               // -> 12 minutes
+                            tmpLongitude = (tmpLongitude - minLongitude) * 60;   // 0,9288 * 60 = 55,728
+                            double secondsLongitude = tmpLongitude;              // -> 55,728 secondes
 
-                            affichageConversionLatitude.setText(String.valueOf("Latitude : " + degresLat + "° " + minLatitude + "' " + Math.floor(secondsLatitude * 10000) / 10000 + "\"" ));
-                            affichageConversionLongitude.setText(String.valueOf("Longitude : " + degresLong + "° " + minLongitude + "' " + Math.floor(secondsLongitude * 10000) / 10000 + "\"" ));
+                            affichageConversionLatitude.setText(String.valueOf(degresLat + "°" + minLatitude + "'" + Math.floor(secondsLatitude * 10000) / 10000 + "\""));
+                            affichageConversionLongitude.setText(String.valueOf(degresLong + "°" + minLongitude + "'" + Math.floor(secondsLongitude * 10000) / 10000 + "\""));
                             //endregion
+
+                            latitudeCity = affichageConversionLatitude.getText().toString();
+                            longitudeCity = affichageConversionLongitude.getText().toString();
 
                             fab.show();
                             //endregion
-
                         }
 
                         break;
@@ -365,6 +270,47 @@ public class ConversionFragment extends Fragment {
         }
     }
 
+    public void CustomAlertDialog(final EditText editText) {
+
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.MATCH_PARENT);
+        editText.setLayoutParams(lp);
+
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+        alertDialog.setTitle("Ajout nouvelle ville");
+        alertDialog.setMessage("Entrer nom de la ville");
+        alertDialog.setView(editText);
+
+        alertDialog.setPositiveButton("YES",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        cityName = editText.getText().toString();
+
+                        DatabaseHandler db = new DatabaseHandler(getContext());
+
+                        Log.d("Insert: ", "Inserting into database..");
+                        db.addCity(new City(cityName, latitudeCity, longitudeCity));
+
+                        Snackbar.make(getView(), "Coordonnée rajouté a la liste", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
+
+                    }
+                });
+
+        alertDialog.setNegativeButton("Cancel",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+
+                        Snackbar.make(getView(), "Ajout annulé", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
+                    }
+                });
+
+        alertDialog.show();
+    }
+
     @Override
     public void onDetach() {
         super.onDetach();
@@ -376,12 +322,12 @@ public class ConversionFragment extends Fragment {
      * fragment to allow an interaction in this fragment to be communicated
      * to the activity and potentially other fragments contained in that
      * activity.
-     * <p>
+     * <p/>
      * See the Android Training lesson <a href=
      * "http://developer.android.com/training/basics/fragments/communicating.html"
      * >Communicating with Other Fragments</a> for more information.
      */
-    public interface OnFragmentInteractionListener {
+    interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }

@@ -32,63 +32,48 @@
             android:id="@+id/flContent"
             android:layout_width="match_parent"
             android:layout_height="510dp"
-            android:orientation="horizontal"
-            android:layout_marginTop="58dp">
+            android:layout_marginTop="58dp"
+            android:orientation="horizontal">
 
             <RelativeLayout
                 android:id="@+id/messageWelcome"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@+id/welcome"
                 android:layout_centerHorizontal="true">
 
                 <TextView
+                    android:id="@+id/welcome"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="@string/welcomeMessage1"
-                    android:id="@+id/welcome"
-                    android:layout_marginTop="80dp"
-                    android:layout_gravity="center_horizontal|top"
-                    android:textStyle="bold"
-                    android:textSize="25sp"
                     android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true" />
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal|top"
+                    android:layout_marginTop="80dp"
+                    android:text="@string/welcomeMessage1"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/welcome2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="@string/welcomeMessage2"
-                    android:id="@+id/welcome2"
-                    android:textStyle="italic"
                     android:layout_below="@+id/welcome"
-                    android:layout_centerHorizontal="true" />
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/welcomeMessage2"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="italic" />
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:id="@+id/imageView2"
-                    android:src="@mipmap/ic_nav_header"
-                    android:contentDescription="@string/logowelcome"
-                    android:scaleX="5"
-                    android:scaleY="5"
-                    android:layout_centerVertical="true"
-                    android:layout_centerHorizontal="true" />
-
-                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="Check the drawer          to select an Activity"
-                    android:id="@+id/textView2"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginBottom="47dp"
-                    android:layout_alignRight="@+id/welcome2"
-                    android:layout_alignEnd="@+id/welcome2"
-                    android:layout_alignLeft="@+id/welcome2"
-                    android:layout_alignStart="@+id/welcome2"
-                    android:gravity="center" />
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/logowelcome"
+                    android:scaleX="4"
+                    android:scaleY="4"
+                    android:src="@mipmap/ic_main" />
 
             </RelativeLayout>
         </RelativeLayout>

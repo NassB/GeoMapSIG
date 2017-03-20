@@ -41,7 +41,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="13dp"
         android:ems="10"
-        android:hint="@string/lati"
+        android:hint="@string/latitude"
         android:inputType="numberSigned|numberDecimal">
 
         <requestFocus />
@@ -61,8 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="@string/degres_sexa"
-            android:inputType="number|numberDecimal"
-            />
+            android:inputType="number|numberDecimal"/>
 
         <EditText
             android:id="@+id/minutes_latitude"
@@ -70,8 +69,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="@string/minute_sexa"
-            android:inputType="number|numberDecimal"
-            />
+            android:inputType="number|numberDecimal"/>
 
         <EditText
             android:id="@+id/secondes_latitude"
@@ -79,8 +77,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="@string/seconde_sexa"
-            android:inputType="number|numberDecimal"
-            />
+            android:inputType="number|numberDecimal"/>
     </LinearLayout>
 
     <TextView
@@ -101,7 +98,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:ems="10"
-        android:hint="@string/longi"
+        android:hint="@string/longitude"
         android:inputType="numberSigned|numberDecimal">
 
         <requestFocus />
@@ -121,8 +118,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="@string/degres_sexa"
-            android:inputType="number|numberDecimal"
-            />
+            android:inputType="number|numberDecimal"/>
 
         <EditText
             android:id="@+id/minutes_longitude"
@@ -130,8 +126,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="@string/minute_sexa"
-            android:inputType="number|numberDecimal"
-            />
+            android:inputType="number|numberDecimal"/>
 
         <EditText
             android:id="@+id/secondes_longitude"
@@ -139,8 +134,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="@string/seconde_sexa"
-            android:inputType="number|numberDecimal"
-            />
+            android:inputType="number|numberDecimal"/>
     </LinearLayout>
 
     <RadioGroup
@@ -176,7 +170,8 @@
         android:layout_alignTop="@+id/Reset"
         android:layout_toLeftOf="@+id/textLongitude"
         android:layout_toStartOf="@+id/textLongitude"
-        android:text="@string/buttonConversion" />
+        android:text="@string/buttonConversion"
+        android:enabled="true" />
 
     <TextView
         android:id="@+id/textResultat"
@@ -201,26 +196,18 @@
         android:layout_marginTop="20dp"
         android:layout_toEndOf="@+id/textLongitude"
         android:layout_toRightOf="@+id/textLongitude"
-        android:text="@string/buttonReset" />
-
-    <TextView
-        android:id="@+id/affichageResultatLatitude"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textResultat"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:ems="10"
-        android:textSize="18sp" />
+        android:text="@string/buttonReset"
+        android:enabled="true" />
 
     <TextView
         android:id="@+id/affichageResultatLongitude"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/affichageResultatLatitude"
-        android:layout_centerHorizontal="true"
         android:ems="10"
-        android:textSize="18sp" />
+        android:textSize="16sp"
+        android:layout_alignLeft="@+id/affichageResultatLatitude"
+        android:layout_alignStart="@+id/affichageResultatLatitude" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
@@ -232,6 +219,41 @@
         android:layout_alignTop="@+id/textResultat"
         android:layout_toRightOf="@+id/uniteCoordonnée"
         android:layout_toEndOf="@+id/uniteCoordonnée" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/affichageResultatLatitude"
+        android:text="@string/latitude_tv"
+        android:textColor="@color/primary_text"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/affichageResultatLongitude"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="@string/longitude_tv"
+        android:textColor="@color/primary_text"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/affichageResultatLatitude"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:textSize="16sp"
+        android:layout_below="@+id/textResultat"
+        android:layout_toRightOf="@+id/textView4"
+        android:layout_toEndOf="@+id/textView4"
+        android:layout_marginLeft="21dp"
+        android:layout_marginStart="21dp" />
 
 </RelativeLayout>
 

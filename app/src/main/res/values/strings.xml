@@ -10,8 +10,6 @@
 
     <string name="longitude">Longitude</string>
     <string name="latitude">Latitude</string>
-    <string name="lati">Latitude</string>
-    <string name="longi">Longitude</string>
 
     <string name="affichage_resultat">Le resultat est :</string>
 
@@ -26,22 +24,25 @@
     <string name="seconde_sexa">Secondes</string>
 
     <string name="nav_app_name">GeoMapSIG</string>
-    <string name="navDescriptionApp">Convertisseur | Tableau | Carte</string>
+    <string name="navDescriptionApp">Convertisseur | Liste Villes </string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tableau_coordonnees">Tableau Coordonnées</string>
     <string name="villesCellule">Villes</string>
-    <string name="sexagecimaleTableau">Sexagecimale</string>
-    <string name="decimaleTableau">Decimale</string>
-    <string name="latitudeSexagecimaleTableau">Latitude</string>
-    <string name="longitudeSexagecimaleTableau">Longitude</string>
-    <string name="latitudeDecimaleTableau">Latitude</string>
-    <string name="longitudeDecimaleTableau">Longitude</string>
     <string name="welcomeMessage2">GeoMapSIG Application</string>
     <string name="welcomeMessage1">Welcome to</string>
     <string name="logowelcome">logoWelcome</string>
     <string name="point_on_map">Point On Map</string>
     <string name="title_activity_conversion">Conversion</string>
     <string name="title_activity_tableau">Tableau</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_city_details">CityDetails</string>
+    <string name="nameCityTv">Name :</string>
+    <string name="conversion">Conversion</string>
+    <string name="communicate">Communicate</string>
+    <string name="list">List</string>
+    <string name="send_to_svg_kml">Send To SVG/KML</string>
+    <string name="latitude_tv">Latitude :</string>
+    <string name="longitude_tv">Longitude :</string>
+    <string name="appicon">appIcon</string>
 </resources>

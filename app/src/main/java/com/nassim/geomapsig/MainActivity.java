@@ -15,9 +15,12 @@ import android.view.MenuItem;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, TableauFragment.OnFragmentInteractionListener,
-        MapsFragment.OnFragmentInteractionListener, ConversionFragment.OnFragmentInteractionListener {
+        implements NavigationView.OnNavigationItemSelectedListener,
+        ConversionFragment.OnFragmentInteractionListener {
 
+    static String TAG_LATITUDE = "latitudeCity";
+    static String TAG_LONGITUDE = "longitudeCity";
+    static String TAG_CITY = "cityName";
     DrawerLayout mDrawer;
 
     @Override
@@ -76,17 +79,13 @@ public class MainActivity extends AppCompatActivity
         Fragment fragment = null;
         FragmentManager fragmentManager = getSupportFragmentManager();
 
-        switch(item.getItemId()) {
+        switch (item.getItemId()) {
             case R.id.nav_conversion:
                 fragmentClass = ConversionFragment.class;
                 findViewById(R.id.messageWelcome).setVisibility(View.GONE);
                 break;
-            case R.id.nav_tableau:
-                fragmentClass = TableauFragment.class;
-                findViewById(R.id.messageWelcome).setVisibility(View.GONE);
-                break;
-            case R.id.nav_maps:
-                fragmentClass = MapsFragment.class;
+            case R.id.nav_list:
+                fragmentClass = CityListFragment.class;
                 findViewById(R.id.messageWelcome).setVisibility(View.GONE);
                 break;
             default:

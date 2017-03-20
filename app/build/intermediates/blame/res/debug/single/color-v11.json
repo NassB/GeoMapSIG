@@ -1,10 +1,10 @@
 [
     {
-        "merged": "/Users/iem/Desktop/GeoMapSIG/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
-        "source": "/Users/iem/Desktop/GeoMapSIG/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+        "merged": "E:\\Android_Java\\GeoMapSIG\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
+        "source": "C:\\Users\\nassim\\.android\\build-cache\\e802dc3c1010299652e8d299dd9d3fe2b6dd8731\\output\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
     },
     {
-        "merged": "/Users/iem/Desktop/GeoMapSIG/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
-        "source": "/Users/iem/Desktop/GeoMapSIG/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+        "merged": "E:\\Android_Java\\GeoMapSIG\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
+        "source": "C:\\Users\\nassim\\.android\\build-cache\\e802dc3c1010299652e8d299dd9d3fe2b6dd8731\\output\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
     }
 ]

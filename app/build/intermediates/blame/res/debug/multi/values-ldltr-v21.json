@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/iem/Desktop/GeoMapSIG/app/build/intermediates/res/merged/debug/values-ldltr-v21/values-ldltr-v21.xml",
+        "outputFile": "E:\\Android_Java\\GeoMapSIG\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ldltr-v21\\values-ldltr-v21.xml",
         "map": [
             {
                 "to": {
@@ -11,13 +11,13 @@
                     "endOffset": 163
                 },
                 "from": {
-                    "file": "/Users/iem/Desktop/GeoMapSIG/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-ldltr-v21/values-ldltr-v21.xml",
+                    "file": "C:\\Users\\nassim\\.android\\build-cache\\e802dc3c1010299652e8d299dd9d3fe2b6dd8731\\output\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
                     "position": {
-                        "startLine": 4,
+                        "startLine": 2,
                         "startColumn": 4,
-                        "startOffset": 240,
+                        "startOffset": 55,
                         "endColumn": 112,
-                        "endOffset": 348
+                        "endOffset": 163
                     }
                 }
             }

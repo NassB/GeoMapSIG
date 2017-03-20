@@ -15,7 +15,7 @@ public class FilterActivity implements InputFilter {
         this.max = max;
     }
 
-    public FilterActivity(String min, String max) {
+    FilterActivity(String min, String max) {
         this.min = Double.parseDouble(min);
         this.max = Double.parseDouble(max);
     }

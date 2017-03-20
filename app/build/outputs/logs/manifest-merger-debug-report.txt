@@ -1,88 +1,476 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml:2:1-34:12
+ADDED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml:2:1-37:12
 	package
-		ADDED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml:2:11-41
-		INJECTED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml
+		ADDED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml:3:5-35
+		INJECTED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml
+		INJECTED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml:3:11-69
+		ADDED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml
+		INJECTED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml
+uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
+ADDED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml:5:5-98
+	android:name
+		ADDED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml:5:22-95
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml:7:5-81
+	android:name
+		ADDED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml:7:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml:8:5-79
+	android:name
+		ADDED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml:8:22-76
 application
-ADDED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml:5:5-32:19
-MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/iem/Desktop/GeoMapSIG/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.1] /Users/iem/Desktop/GeoMapSIG/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:design:23.1.1] /Users/iem/Desktop/GeoMapSIG/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/iem/Desktop/GeoMapSIG/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.1] /Users/iem/Desktop/GeoMapSIG/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.1] /Users/iem/Desktop/GeoMapSIG/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.1] /Users/iem/Desktop/GeoMapSIG/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.1] /Users/iem/Desktop/GeoMapSIG/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
+ADDED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml:10:5-35:19
+MERGED from [com.google.android.gms:play-services:10.2.0] C:\Users\nassim\.android\build-cache\34643412790fbd72a0d0c60bb92406cd6bc45634\output\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-ads-lite:10.2.0] C:\Users\nassim\.android\build-cache\e37b0aedd00d9adcf28194396bf9d71c94d5e899\output\AndroidManifest.xml:23:5-27:19
+MERGED from [com.google.android.gms:play-services-analytics:10.2.0] C:\Users\nassim\.android\build-cache\cbc9c466682681c5390c7100e1b6068e30d2cd5f\output\AndroidManifest.xml:26:5-19
+MERGED from [com.google.android.gms:play-services-appinvite:10.2.0] C:\Users\nassim\.android\build-cache\f8b9a1c07ab05c570f0ab469b951b34d0a0aea18\output\AndroidManifest.xml:19:5-26:19
+MERGED from [com.google.android.gms:play-services-auth:10.2.0] C:\Users\nassim\.android\build-cache\49f574830699185435661d0da8e2db6ad7664bbd\output\AndroidManifest.xml:19:5-25:19
+MERGED from [com.google.android.gms:play-services-cast-framework:10.2.0] C:\Users\nassim\.android\build-cache\214fb07e5c3f8cea71247b5a2ee1b8cd4750a9b4\output\AndroidManifest.xml:4:5-8:19
+MERGED from [com.google.android.gms:play-services-cast:10.2.0] C:\Users\nassim\.android\build-cache\e7145e21707a8ec07e0260d8e1a3d2d56c44ade5\output\AndroidManifest.xml:18:5-19
+MERGED from [com.android.support:mediarouter-v7:24.0.0] C:\Users\nassim\.android\build-cache\10ae8c73acf3fb6b18aad7fbac197be2ecd123a6\output\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:palette-v7:24.0.0] C:\Users\nassim\.android\build-cache\e253405ee1a63b759674d1ba25acd16c7b97df81\output\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-clearcut:10.2.0] C:\Users\nassim\.android\build-cache\ee6a5eec776ee57c4a937ec027e3c87e4f4d0be6\output\AndroidManifest.xml:18:5-19
+MERGED from [com.google.firebase:firebase-config:10.2.0] C:\Users\nassim\.android\build-cache\2b3a44884743bee81a4e5c44a950d177af316b24\output\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-awareness:10.2.0] C:\Users\nassim\.android\build-cache\d05f78b61fe7b6b69c9aa74a78b87360886e5a46\output\AndroidManifest.xml:18:5-19
+MERGED from [com.google.firebase:firebase-crash:10.2.0] C:\Users\nassim\.android\build-cache\91191e867306b1b4858ac3fbfdb076b4a3daee6f\output\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-auth:10.2.0] C:\Users\nassim\.android\build-cache\29119ab815581c9d7bf1ac12db87a85348b52555\output\AndroidManifest.xml:19:5-20:19
+MERGED from [com.google.firebase:firebase-messaging:10.2.0] C:\Users\nassim\.android\build-cache\04d347201806eea5b8adb8a3d97a2328bdf69e6e\output\AndroidManifest.xml:19:5-29:19
+MERGED from [com.google.android.gms:play-services-fitness:10.2.0] C:\Users\nassim\.android\build-cache\fca52a776debc6f663f6031c59d0d7dead55e82e\output\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-games:10.2.0] C:\Users\nassim\.android\build-cache\ed8118f964b5761b7251ef03cde6ee12d41ba7f0\output\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-drive:10.2.0] C:\Users\nassim\.android\build-cache\15c70b3502e47d254f1ab0327c5b9a4a76814071\output\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-gass:10.2.0] C:\Users\nassim\.android\build-cache\9201ab7a4fa5482a8459ed95511a3d74c6bcc4dc\output\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-gcm:10.2.0] C:\Users\nassim\.android\build-cache\d42bed52954cc9537ff00db89a4646e0c0a2f791\output\AndroidManifest.xml:23:5-19
+MERGED from [com.google.firebase:firebase-appindexing:10.2.0] C:\Users\nassim\.android\build-cache\a84b6d4aac281e4ced51bf9903c6d17cbf4b07c3\output\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-iid:10.2.0] C:\Users\nassim\.android\build-cache\2d4c74c0b33f6b730497d0303f98101dade47008\output\AndroidManifest.xml:23:5-19
+MERGED from [com.google.android.gms:play-services-location:10.2.0] C:\Users\nassim\.android\build-cache\8dea99f3976d6ac4ec413aa1e89e596f76ebd612\output\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-nearby:10.2.0] C:\Users\nassim\.android\build-cache\80947439cae3103e6e415460d21ac7903b1b8a64\output\AndroidManifest.xml:5:5-19
+MERGED from [com.google.android.gms:play-services-panorama:10.2.0] C:\Users\nassim\.android\build-cache\0f4b9eb33b9eb5013913d31980e9b9dc2e04c8a8\output\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-places:10.2.0] C:\Users\nassim\.android\build-cache\62c6a40602cc085606532f71d6f405c41bd15284\output\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-plus:10.2.0] C:\Users\nassim\.android\build-cache\0235fac519d1b259a3ce5f26e1e7ac963bf83a33\output\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-safetynet:10.2.0] C:\Users\nassim\.android\build-cache\7ac6b5ca2420cb68d0a0710a9ea94db79abdeaa7\output\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] C:\Users\nassim\.android\build-cache\03184af4cc3f4b99e6b640bae3af8294077dee1f\output\AndroidManifest.xml:23:5-33:19
+MERGED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\nassim\.android\build-cache\894e22031f3cf52a0797a60ee812e55a18528f8a\output\AndroidManifest.xml:24:5-33:19
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] C:\Users\nassim\.android\build-cache\e3354c8522edd896bab2e3982f76912b438b24ac\output\AndroidManifest.xml:24:5-28:19
+MERGED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\nassim\.android\build-cache\b36ed08241dfd5ed11e58cf1ffbacbdc216e0f92\output\AndroidManifest.xml:28:5-50:19
+MERGED from [com.google.firebase:firebase-common:10.2.0] C:\Users\nassim\.android\build-cache\412087c91b105b401faeda4b4f4ae153db2792a1\output\AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:10.2.0] C:\Users\nassim\.android\build-cache\57ae145da56a7df5749c22012da71019b03f4d43\output\AndroidManifest.xml:19:5-19
+MERGED from [com.google.android.gms:play-services-analytics-impl:10.2.0] C:\Users\nassim\.android\build-cache\19a900183a880256a1f0af1e2738406f7c20fd41\output\AndroidManifest.xml:26:5-19
+MERGED from [com.google.android.gms:play-services-vision:10.2.0] C:\Users\nassim\.android\build-cache\219a62f563c6e7700c71bbd254909981039beb7e\output\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-identity:10.2.0] C:\Users\nassim\.android\build-cache\6e1d6d6c0cd85b2967e5349a8459b4ba597a59e0\output\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-maps:10.2.0] C:\Users\nassim\.android\build-cache\a9e571a268c4eafa983e7ff3f7e1ce87d9b05136\output\AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-wearable:10.2.0] C:\Users\nassim\.android\build-cache\535e7ab7433baffd188095320b1d67dfdfde0204\output\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-base:10.2.0] C:\Users\nassim\.android\build-cache\0c86e3c52284cfb71dc53cd0f08b24b2dcfc3e3f\output\AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-tasks:10.2.0] C:\Users\nassim\.android\build-cache\6ee57d7270ca603cecc1585da39ead44806c0758\output\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:10.2.0] C:\Users\nassim\.android\build-cache\e2e76148a9232e5d11cc6fb2a59a494bcc370cd0\output\AndroidManifest.xml:19:5-21:19
+MERGED from [com.google.maps.android:android-maps-utils:0.4] C:\Users\nassim\.android\build-cache\8183011d82291147a223f0de92035bd9f2b8cdec\output\AndroidManifest.xml:7:5-11:19
+MERGED from [com.android.support:design:25.3.0] C:\Users\nassim\.android\build-cache\92e9c37ee2fe0b9fc162e8ec3cb929d265706303\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:transition:25.3.0] C:\Users\nassim\.android\build-cache\a4103c7413a92064631b7fcbd46db305f43b82a8\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.0] C:\Users\nassim\.android\build-cache\e802dc3c1010299652e8d299dd9d3fe2b6dd8731\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.0] C:\Users\nassim\.android\build-cache\f26f51fff1790a5831f9487d812026cbb7024c28\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.0] C:\Users\nassim\.android\build-cache\409f7bb31faf05e906a6eff84b9f778a274d2381\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.0] C:\Users\nassim\.android\build-cache\70467a8f5e4b8342b6c867e6d42cba0ab2ede63a\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.0] C:\Users\nassim\.android\build-cache\9bffb9d00837ac617d6bb1647a7bebbac2451501\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.0] C:\Users\nassim\.android\build-cache\399c9534b10ef3f78b23650237cc29f34ce38648\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.0] C:\Users\nassim\.android\build-cache\7280c597033248b817512c80526530a35f0cc371\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.0] C:\Users\nassim\.android\build-cache\29ed5c098d5235c8aeade7e1a785aacdff01928b\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-compat:25.3.0] C:\Users\nassim\.android\build-cache\2bb59c0e738cb78c6b54560c0b9aa3f0d2a19035\output\AndroidManifest.xml:29:5-20
 	android:label
-		ADDED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml:8:9-41
+		ADDED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml:13:9-41
 	android:supportsRtl
-		ADDED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml:9:9-35
+		ADDED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml:14:9-35
 	android:allowBackup
-		ADDED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml:6:9-35
+		ADDED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml:11:9-35
 	android:icon
-		ADDED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml:7:9-45
+		ADDED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml:12:9-43
 	android:theme
-		ADDED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml:10:9-40
+		ADDED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml:15:9-40
 activity#com.nassim.geomapsig.MainActivity
-ADDED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml:11:9-21:20
+ADDED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml:16:9-26:20
 	android:screenOrientation
-		ADDED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml:14:13-49
+		ADDED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml:19:13-49
 	android:label
-		ADDED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml:13:13-45
+		ADDED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml:18:13-45
 	android:theme
-		ADDED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml:15:13-56
+		ADDED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml:20:13-56
 	android:name
-		ADDED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml:12:13-41
+		ADDED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml:17:13-41
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml:16:13-20:29
+ADDED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml:21:13-25:29
 action#android.intent.action.MAIN
-ADDED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml:17:17-68
+ADDED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml:22:17-69
 	android:name
-		ADDED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml:17:25-66
+		ADDED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml:22:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml:19:17-76
+ADDED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml:24:17-77
 	android:name
-		ADDED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml:19:27-74
-activity#com.nassim.geomapsig.ConversionActivity
-ADDED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml:22:9-26:20
+		ADDED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml:24:27-74
+meta-data#com.google.android.geo.API_KEY
+ADDED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml:28:9-30:55
+	android:value
+		ADDED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml:30:13-52
+	android:name
+		ADDED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml:29:13-58
+activity#com.nassim.geomapsig.MapsActivity
+ADDED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml:32:9-34:59
 	android:label
-		ADDED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml:24:13-62
-	android:theme
-		ADDED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml:25:13-56
+		ADDED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml:34:13-56
 	android:name
-		ADDED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml:23:13-47
-activity#com.nassim.geomapsig.TableauActivity
-ADDED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml:27:9-31:20
-	android:label
-		ADDED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml:29:13-59
-	android:theme
-		ADDED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml:30:13-56
-	android:name
-		ADDED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml:28:13-44
+		ADDED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml:33:13-41
 uses-sdk
-INJECTED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/iem/Desktop/GeoMapSIG/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] /Users/iem/Desktop/GeoMapSIG/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:design:23.1.1] /Users/iem/Desktop/GeoMapSIG/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/iem/Desktop/GeoMapSIG/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] /Users/iem/Desktop/GeoMapSIG/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:23.1.1] /Users/iem/Desktop/GeoMapSIG/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] /Users/iem/Desktop/GeoMapSIG/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] /Users/iem/Desktop/GeoMapSIG/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] /Users/iem/Desktop/GeoMapSIG/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
+INJECTED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.google.android.gms:play-services:10.2.0] C:\Users\nassim\.android\build-cache\34643412790fbd72a0d0c60bb92406cd6bc45634\output\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-ads:10.2.0] C:\Users\nassim\.android\build-cache\78f0ded3a8e74d7b4257b7eb27c33f08629e8070\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-ads-lite:10.2.0] C:\Users\nassim\.android\build-cache\e37b0aedd00d9adcf28194396bf9d71c94d5e899\output\AndroidManifest.xml:22:5-43
+MERGED from [com.google.android.gms:play-services-analytics:10.2.0] C:\Users\nassim\.android\build-cache\cbc9c466682681c5390c7100e1b6068e30d2cd5f\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-appinvite:10.2.0] C:\Users\nassim\.android\build-cache\f8b9a1c07ab05c570f0ab469b951b34d0a0aea18\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-auth:10.2.0] C:\Users\nassim\.android\build-cache\49f574830699185435661d0da8e2db6ad7664bbd\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-auth-base:10.2.0] C:\Users\nassim\.android\build-cache\ac56c0ef5c366b59d66a3ca50f020e3db632396b\output\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-cast-framework:10.2.0] C:\Users\nassim\.android\build-cache\214fb07e5c3f8cea71247b5a2ee1b8cd4750a9b4\output\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-cast:10.2.0] C:\Users\nassim\.android\build-cache\e7145e21707a8ec07e0260d8e1a3d2d56c44ade5\output\AndroidManifest.xml:17:5-43
+MERGED from [com.android.support:mediarouter-v7:24.0.0] C:\Users\nassim\.android\build-cache\10ae8c73acf3fb6b18aad7fbac197be2ecd123a6\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:palette-v7:24.0.0] C:\Users\nassim\.android\build-cache\e253405ee1a63b759674d1ba25acd16c7b97df81\output\AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-clearcut:10.2.0] C:\Users\nassim\.android\build-cache\ee6a5eec776ee57c4a937ec027e3c87e4f4d0be6\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-config:10.2.0] C:\Users\nassim\.android\build-cache\2b3a44884743bee81a4e5c44a950d177af316b24\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-awareness:10.2.0] C:\Users\nassim\.android\build-cache\d05f78b61fe7b6b69c9aa74a78b87360886e5a46\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-crash:10.2.0] C:\Users\nassim\.android\build-cache\91191e867306b1b4858ac3fbfdb076b4a3daee6f\output\AndroidManifest.xml:20:5-43
+MERGED from [com.google.firebase:firebase-auth:10.2.0] C:\Users\nassim\.android\build-cache\29119ab815581c9d7bf1ac12db87a85348b52555\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-database:10.2.0] C:\Users\nassim\.android\build-cache\6aebe4b35df250c210aa6011723b92404d5790b0\output\AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-database-connection:10.2.0] C:\Users\nassim\.android\build-cache\4e07e81d13c25def5d4fb6aea78ad103299009af\output\AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-messaging:10.2.0] C:\Users\nassim\.android\build-cache\04d347201806eea5b8adb8a3d97a2328bdf69e6e\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-storage:10.2.0] C:\Users\nassim\.android\build-cache\5f96d6efab0ce0cd66b41f6bbf6b28fb7b5bc486\output\AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-storage-common:10.2.0] C:\Users\nassim\.android\build-cache\99ad1743cd3348f1c4a572d53aac26fba521d378\output\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-fitness:10.2.0] C:\Users\nassim\.android\build-cache\fca52a776debc6f663f6031c59d0d7dead55e82e\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-games:10.2.0] C:\Users\nassim\.android\build-cache\ed8118f964b5761b7251ef03cde6ee12d41ba7f0\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-drive:10.2.0] C:\Users\nassim\.android\build-cache\15c70b3502e47d254f1ab0327c5b9a4a76814071\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-gass:10.2.0] C:\Users\nassim\.android\build-cache\9201ab7a4fa5482a8459ed95511a3d74c6bcc4dc\output\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-gcm:10.2.0] C:\Users\nassim\.android\build-cache\d42bed52954cc9537ff00db89a4646e0c0a2f791\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-appindexing:10.2.0] C:\Users\nassim\.android\build-cache\a84b6d4aac281e4ced51bf9903c6d17cbf4b07c3\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-iid:10.2.0] C:\Users\nassim\.android\build-cache\2d4c74c0b33f6b730497d0303f98101dade47008\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-instantapps:10.2.0] C:\Users\nassim\.android\build-cache\6ca2addb38e1ee2a6b295441cc4c05830a85d7b8\output\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-location:10.2.0] C:\Users\nassim\.android\build-cache\8dea99f3976d6ac4ec413aa1e89e596f76ebd612\output\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-nearby:10.2.0] C:\Users\nassim\.android\build-cache\80947439cae3103e6e415460d21ac7903b1b8a64\output\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-panorama:10.2.0] C:\Users\nassim\.android\build-cache\0f4b9eb33b9eb5013913d31980e9b9dc2e04c8a8\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-places:10.2.0] C:\Users\nassim\.android\build-cache\62c6a40602cc085606532f71d6f405c41bd15284\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-plus:10.2.0] C:\Users\nassim\.android\build-cache\0235fac519d1b259a3ce5f26e1e7ac963bf83a33\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-safetynet:10.2.0] C:\Users\nassim\.android\build-cache\7ac6b5ca2420cb68d0a0710a9ea94db79abdeaa7\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tagmanager:10.2.0] C:\Users\nassim\.android\build-cache\1db254dd440b64120e80dee8b1df054ba0d30e95\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] C:\Users\nassim\.android\build-cache\03184af4cc3f4b99e6b640bae3af8294077dee1f\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\nassim\.android\build-cache\894e22031f3cf52a0797a60ee812e55a18528f8a\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] C:\Users\nassim\.android\build-cache\e3354c8522edd896bab2e3982f76912b438b24ac\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\nassim\.android\build-cache\b36ed08241dfd5ed11e58cf1ffbacbdc216e0f92\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-common:10.2.0] C:\Users\nassim\.android\build-cache\412087c91b105b401faeda4b4f4ae153db2792a1\output\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:10.2.0] C:\Users\nassim\.android\build-cache\57ae145da56a7df5749c22012da71019b03f4d43\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-analytics-impl:10.2.0] C:\Users\nassim\.android\build-cache\19a900183a880256a1f0af1e2738406f7c20fd41\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-vision:10.2.0] C:\Users\nassim\.android\build-cache\219a62f563c6e7700c71bbd254909981039beb7e\output\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-wallet:10.2.0] C:\Users\nassim\.android\build-cache\cbcc5314a7db651b65f50f8f80d695e64ea3b623\output\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-identity:10.2.0] C:\Users\nassim\.android\build-cache\6e1d6d6c0cd85b2967e5349a8459b4ba597a59e0\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-maps:10.2.0] C:\Users\nassim\.android\build-cache\a9e571a268c4eafa983e7ff3f7e1ce87d9b05136\output\AndroidManifest.xml:23:5-43
+MERGED from [com.google.android.gms:play-services-wearable:10.2.0] C:\Users\nassim\.android\build-cache\535e7ab7433baffd188095320b1d67dfdfde0204\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-base:10.2.0] C:\Users\nassim\.android\build-cache\0c86e3c52284cfb71dc53cd0f08b24b2dcfc3e3f\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tasks:10.2.0] C:\Users\nassim\.android\build-cache\6ee57d7270ca603cecc1585da39ead44806c0758\output\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-basement:10.2.0] C:\Users\nassim\.android\build-cache\e2e76148a9232e5d11cc6fb2a59a494bcc370cd0\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.maps.android:android-maps-utils:0.4] C:\Users\nassim\.android\build-cache\8183011d82291147a223f0de92035bd9f2b8cdec\output\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:design:25.3.0] C:\Users\nassim\.android\build-cache\92e9c37ee2fe0b9fc162e8ec3cb929d265706303\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:recyclerview-v7:25.3.0] C:\Users\nassim\.android\build-cache\4eebc94754b3f11296c79bc20c28d9c08acfef3c\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.0] C:\Users\nassim\.android\build-cache\a4103c7413a92064631b7fcbd46db305f43b82a8\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:25.3.0] C:\Users\nassim\.android\build-cache\e802dc3c1010299652e8d299dd9d3fe2b6dd8731\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:25.3.0] C:\Users\nassim\.android\build-cache\f26f51fff1790a5831f9487d812026cbb7024c28\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.0] C:\Users\nassim\.android\build-cache\409f7bb31faf05e906a6eff84b9f778a274d2381\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.0] C:\Users\nassim\.android\build-cache\70467a8f5e4b8342b6c867e6d42cba0ab2ede63a\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.0] C:\Users\nassim\.android\build-cache\9bffb9d00837ac617d6bb1647a7bebbac2451501\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.0] C:\Users\nassim\.android\build-cache\399c9534b10ef3f78b23650237cc29f34ce38648\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:25.3.0] C:\Users\nassim\.android\build-cache\7280c597033248b817512c80526530a35f0cc371\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.0] C:\Users\nassim\.android\build-cache\29ed5c098d5235c8aeade7e1a785aacdff01928b\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-compat:25.3.0] C:\Users\nassim\.android\build-cache\2bb59c0e738cb78c6b54560c0b9aa3f0d2a19035\output\AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:25.3.0] C:\Users\nassim\.android\build-cache\92e9c37ee2fe0b9fc162e8ec3cb929d265706303\output\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml
+		INJECTED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/iem/Desktop/GeoMapSIG/app/src/main/AndroidManifest.xml
+		INJECTED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Android_Java\GeoMapSIG\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from [com.google.android.gms:play-services-ads-lite:10.2.0] C:\Users\nassim\.android\build-cache\e37b0aedd00d9adcf28194396bf9d71c94d5e899\output\AndroidManifest.xml:19:5-66
+MERGED from [com.google.android.gms:play-services-analytics:10.2.0] C:\Users\nassim\.android\build-cache\cbc9c466682681c5390c7100e1b6068e30d2cd5f\output\AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-appinvite:10.2.0] C:\Users\nassim\.android\build-cache\f8b9a1c07ab05c570f0ab469b951b34d0a0aea18\output\AndroidManifest.xml:18:5-66
+MERGED from [com.google.firebase:firebase-crash:10.2.0] C:\Users\nassim\.android\build-cache\91191e867306b1b4858ac3fbfdb076b4a3daee6f\output\AndroidManifest.xml:18:5-66
+MERGED from [com.google.android.gms:play-services-gcm:10.2.0] C:\Users\nassim\.android\build-cache\d42bed52954cc9537ff00db89a4646e0c0a2f791\output\AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-iid:10.2.0] C:\Users\nassim\.android\build-cache\2d4c74c0b33f6b730497d0303f98101dade47008\output\AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] C:\Users\nassim\.android\build-cache\03184af4cc3f4b99e6b640bae3af8294077dee1f\output\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\nassim\.android\build-cache\894e22031f3cf52a0797a60ee812e55a18528f8a\output\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] C:\Users\nassim\.android\build-cache\e3354c8522edd896bab2e3982f76912b438b24ac\output\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\nassim\.android\build-cache\b36ed08241dfd5ed11e58cf1ffbacbdc216e0f92\output\AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-analytics-impl:10.2.0] C:\Users\nassim\.android\build-cache\19a900183a880256a1f0af1e2738406f7c20fd41\output\AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-maps:10.2.0] C:\Users\nassim\.android\build-cache\a9e571a268c4eafa983e7ff3f7e1ce87d9b05136\output\AndroidManifest.xml:20:5-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:10.2.0] C:\Users\nassim\.android\build-cache\e37b0aedd00d9adcf28194396bf9d71c94d5e899\output\AndroidManifest.xml:19:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.gms:play-services-ads-lite:10.2.0] C:\Users\nassim\.android\build-cache\e37b0aedd00d9adcf28194396bf9d71c94d5e899\output\AndroidManifest.xml:20:5-78
+MERGED from [com.google.android.gms:play-services-analytics:10.2.0] C:\Users\nassim\.android\build-cache\cbc9c466682681c5390c7100e1b6068e30d2cd5f\output\AndroidManifest.xml:21:5-78
+MERGED from [com.google.android.gms:play-services-nearby:10.2.0] C:\Users\nassim\.android\build-cache\80947439cae3103e6e415460d21ac7903b1b8a64\output\AndroidManifest.xml:4:5-78
+MERGED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] C:\Users\nassim\.android\build-cache\03184af4cc3f4b99e6b640bae3af8294077dee1f\output\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\nassim\.android\build-cache\894e22031f3cf52a0797a60ee812e55a18528f8a\output\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] C:\Users\nassim\.android\build-cache\e3354c8522edd896bab2e3982f76912b438b24ac\output\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\nassim\.android\build-cache\b36ed08241dfd5ed11e58cf1ffbacbdc216e0f92\output\AndroidManifest.xml:19:5-78
+MERGED from [com.google.android.gms:play-services-analytics-impl:10.2.0] C:\Users\nassim\.android\build-cache\19a900183a880256a1f0af1e2738406f7c20fd41\output\AndroidManifest.xml:21:5-78
+MERGED from [com.google.android.gms:play-services-maps:10.2.0] C:\Users\nassim\.android\build-cache\a9e571a268c4eafa983e7ff3f7e1ce87d9b05136\output\AndroidManifest.xml:19:5-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:10.2.0] C:\Users\nassim\.android\build-cache\e37b0aedd00d9adcf28194396bf9d71c94d5e899\output\AndroidManifest.xml:20:22-76
+activity#com.google.android.gms.ads.AdActivity
+ADDED from [com.google.android.gms:play-services-ads-lite:10.2.0] C:\Users\nassim\.android\build-cache\e37b0aedd00d9adcf28194396bf9d71c94d5e899\output\AndroidManifest.xml:25:9-232
+	android:configChanges
+		ADDED from [com.google.android.gms:play-services-ads-lite:10.2.0] C:\Users\nassim\.android\build-cache\e37b0aedd00d9adcf28194396bf9d71c94d5e899\output\AndroidManifest.xml:25:72-181
+	android:theme
+		ADDED from [com.google.android.gms:play-services-ads-lite:10.2.0] C:\Users\nassim\.android\build-cache\e37b0aedd00d9adcf28194396bf9d71c94d5e899\output\AndroidManifest.xml:25:182-230
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:10.2.0] C:\Users\nassim\.android\build-cache\e37b0aedd00d9adcf28194396bf9d71c94d5e899\output\AndroidManifest.xml:25:19-71
+activity#com.google.android.gms.ads.purchase.InAppPurchaseActivity
+ADDED from [com.google.android.gms:play-services-ads-lite:10.2.0] C:\Users\nassim\.android\build-cache\e37b0aedd00d9adcf28194396bf9d71c94d5e899\output\AndroidManifest.xml:26:9-131
+	android:theme
+		ADDED from [com.google.android.gms:play-services-ads-lite:10.2.0] C:\Users\nassim\.android\build-cache\e37b0aedd00d9adcf28194396bf9d71c94d5e899\output\AndroidManifest.xml:26:92-129
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:10.2.0] C:\Users\nassim\.android\build-cache\e37b0aedd00d9adcf28194396bf9d71c94d5e899\output\AndroidManifest.xml:26:19-91
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.google.android.gms:play-services-analytics:10.2.0] C:\Users\nassim\.android\build-cache\cbc9c466682681c5390c7100e1b6068e30d2cd5f\output\AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\nassim\.android\build-cache\894e22031f3cf52a0797a60ee812e55a18528f8a\output\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] C:\Users\nassim\.android\build-cache\e3354c8522edd896bab2e3982f76912b438b24ac\output\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\nassim\.android\build-cache\b36ed08241dfd5ed11e58cf1ffbacbdc216e0f92\output\AndroidManifest.xml:21:5-67
+MERGED from [com.google.android.gms:play-services-analytics-impl:10.2.0] C:\Users\nassim\.android\build-cache\19a900183a880256a1f0af1e2738406f7c20fd41\output\AndroidManifest.xml:24:5-67
+	android:name
+		ADDED from [com.google.android.gms:play-services-analytics:10.2.0] C:\Users\nassim\.android\build-cache\cbc9c466682681c5390c7100e1b6068e30d2cd5f\output\AndroidManifest.xml:24:22-65
+activity#com.google.android.gms.appinvite.PreviewActivity
+ADDED from [com.google.android.gms:play-services-appinvite:10.2.0] C:\Users\nassim\.android\build-cache\f8b9a1c07ab05c570f0ab469b951b34d0a0aea18\output\AndroidManifest.xml:20:9-25:20
+	android:exported
+		ADDED from [com.google.android.gms:play-services-appinvite:10.2.0] C:\Users\nassim\.android\build-cache\f8b9a1c07ab05c570f0ab469b951b34d0a0aea18\output\AndroidManifest.xml:20:51-74
+	android:theme
+		ADDED from [com.google.android.gms:play-services-appinvite:10.2.0] C:\Users\nassim\.android\build-cache\f8b9a1c07ab05c570f0ab469b951b34d0a0aea18\output\AndroidManifest.xml:20:75-121
+	android:name
+		ADDED from [com.google.android.gms:play-services-appinvite:10.2.0] C:\Users\nassim\.android\build-cache\f8b9a1c07ab05c570f0ab469b951b34d0a0aea18\output\AndroidManifest.xml:20:19-50
+intent-filter#android.intent.category.DEFAULT+com.google.android.gms.appinvite.ACTION_PREVIEW
+ADDED from [com.google.android.gms:play-services-appinvite:10.2.0] C:\Users\nassim\.android\build-cache\f8b9a1c07ab05c570f0ab469b951b34d0a0aea18\output\AndroidManifest.xml:21:13-24:29
+action#com.google.android.gms.appinvite.ACTION_PREVIEW
+ADDED from [com.google.android.gms:play-services-appinvite:10.2.0] C:\Users\nassim\.android\build-cache\f8b9a1c07ab05c570f0ab469b951b34d0a0aea18\output\AndroidManifest.xml:22:17-89
+	android:name
+		ADDED from [com.google.android.gms:play-services-appinvite:10.2.0] C:\Users\nassim\.android\build-cache\f8b9a1c07ab05c570f0ab469b951b34d0a0aea18\output\AndroidManifest.xml:22:25-87
+category#android.intent.category.DEFAULT
+ADDED from [com.google.android.gms:play-services-appinvite:10.2.0] C:\Users\nassim\.android\build-cache\f8b9a1c07ab05c570f0ab469b951b34d0a0aea18\output\AndroidManifest.xml:23:17-75
+	android:name
+		ADDED from [com.google.android.gms:play-services-appinvite:10.2.0] C:\Users\nassim\.android\build-cache\f8b9a1c07ab05c570f0ab469b951b34d0a0aea18\output\AndroidManifest.xml:23:27-73
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:10.2.0] C:\Users\nassim\.android\build-cache\49f574830699185435661d0da8e2db6ad7664bbd\output\AndroidManifest.xml:20:9-189
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:10.2.0] C:\Users\nassim\.android\build-cache\49f574830699185435661d0da8e2db6ad7664bbd\output\AndroidManifest.xml:20:129-162
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:10.2.0] C:\Users\nassim\.android\build-cache\49f574830699185435661d0da8e2db6ad7664bbd\output\AndroidManifest.xml:20:163-187
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:10.2.0] C:\Users\nassim\.android\build-cache\49f574830699185435661d0da8e2db6ad7664bbd\output\AndroidManifest.xml:20:69-128
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:10.2.0] C:\Users\nassim\.android\build-cache\49f574830699185435661d0da8e2db6ad7664bbd\output\AndroidManifest.xml:20:19-68
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:10.2.0] C:\Users\nassim\.android\build-cache\49f574830699185435661d0da8e2db6ad7664bbd\output\AndroidManifest.xml:24:9-184
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:10.2.0] C:\Users\nassim\.android\build-cache\49f574830699185435661d0da8e2db6ad7664bbd\output\AndroidManifest.xml:24:64-87
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:10.2.0] C:\Users\nassim\.android\build-cache\49f574830699185435661d0da8e2db6ad7664bbd\output\AndroidManifest.xml:24:88-182
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:10.2.0] C:\Users\nassim\.android\build-cache\49f574830699185435661d0da8e2db6ad7664bbd\output\AndroidManifest.xml:24:18-63
+receiver#com.google.android.gms.cast.framework.media.MediaIntentReceiver
+ADDED from [com.google.android.gms:play-services-cast-framework:10.2.0] C:\Users\nassim\.android\build-cache\214fb07e5c3f8cea71247b5a2ee1b8cd4750a9b4\output\AndroidManifest.xml:5:9-99
+	android:name
+		ADDED from [com.google.android.gms:play-services-cast-framework:10.2.0] C:\Users\nassim\.android\build-cache\214fb07e5c3f8cea71247b5a2ee1b8cd4750a9b4\output\AndroidManifest.xml:5:19-97
+service#com.google.android.gms.cast.framework.media.MediaNotificationService
+ADDED from [com.google.android.gms:play-services-cast-framework:10.2.0] C:\Users\nassim\.android\build-cache\214fb07e5c3f8cea71247b5a2ee1b8cd4750a9b4\output\AndroidManifest.xml:6:9-103
+	android:name
+		ADDED from [com.google.android.gms:play-services-cast-framework:10.2.0] C:\Users\nassim\.android\build-cache\214fb07e5c3f8cea71247b5a2ee1b8cd4750a9b4\output\AndroidManifest.xml:6:18-101
+service#com.google.android.gms.cast.framework.ReconnectionService
+ADDED from [com.google.android.gms:play-services-cast-framework:10.2.0] C:\Users\nassim\.android\build-cache\214fb07e5c3f8cea71247b5a2ee1b8cd4750a9b4\output\AndroidManifest.xml:7:9-92
+	android:name
+		ADDED from [com.google.android.gms:play-services-cast-framework:10.2.0] C:\Users\nassim\.android\build-cache\214fb07e5c3f8cea71247b5a2ee1b8cd4750a9b4\output\AndroidManifest.xml:7:18-90
+service#com.google.firebase.messaging.FirebaseMessagingService
+ADDED from [com.google.firebase:firebase-messaging:10.2.0] C:\Users\nassim\.android\build-cache\04d347201806eea5b8adb8a3d97a2328bdf69e6e\output\AndroidManifest.xml:23:9-27:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-messaging:10.2.0] C:\Users\nassim\.android\build-cache\04d347201806eea5b8adb8a3d97a2328bdf69e6e\output\AndroidManifest.xml:23:88-111
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:10.2.0] C:\Users\nassim\.android\build-cache\04d347201806eea5b8adb8a3d97a2328bdf69e6e\output\AndroidManifest.xml:23:18-87
+intent-filter#com.google.firebase.MESSAGING_EVENT
+ADDED from [com.google.firebase:firebase-messaging:10.2.0] C:\Users\nassim\.android\build-cache\04d347201806eea5b8adb8a3d97a2328bdf69e6e\output\AndroidManifest.xml:24:13-26:29
+	android:priority
+		ADDED from [com.google.firebase:firebase-messaging:10.2.0] C:\Users\nassim\.android\build-cache\04d347201806eea5b8adb8a3d97a2328bdf69e6e\output\AndroidManifest.xml:24:28-51
+action#com.google.firebase.MESSAGING_EVENT
+ADDED from [com.google.firebase:firebase-messaging:10.2.0] C:\Users\nassim\.android\build-cache\04d347201806eea5b8adb8a3d97a2328bdf69e6e\output\AndroidManifest.xml:25:17-77
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:10.2.0] C:\Users\nassim\.android\build-cache\04d347201806eea5b8adb8a3d97a2328bdf69e6e\output\AndroidManifest.xml:25:25-75
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.android.gms:play-services-gcm:10.2.0] C:\Users\nassim\.android\build-cache\d42bed52954cc9537ff00db89a4646e0c0a2f791\output\AndroidManifest.xml:20:5-81
+MERGED from [com.google.android.gms:play-services-iid:10.2.0] C:\Users\nassim\.android\build-cache\2d4c74c0b33f6b730497d0303f98101dade47008\output\AndroidManifest.xml:20:5-81
+MERGED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\nassim\.android\build-cache\b36ed08241dfd5ed11e58cf1ffbacbdc216e0f92\output\AndroidManifest.xml:22:5-81
+	android:name
+		ADDED from [com.google.android.gms:play-services-gcm:10.2.0] C:\Users\nassim\.android\build-cache\d42bed52954cc9537ff00db89a4646e0c0a2f791\output\AndroidManifest.xml:20:22-79
+service#com.google.android.gms.tagmanager.TagManagerService
+ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] C:\Users\nassim\.android\build-cache\03184af4cc3f4b99e6b640bae3af8294077dee1f\output\AndroidManifest.xml:24:9-134
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] C:\Users\nassim\.android\build-cache\03184af4cc3f4b99e6b640bae3af8294077dee1f\output\AndroidManifest.xml:24:110-132
+	android:exported
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] C:\Users\nassim\.android\build-cache\03184af4cc3f4b99e6b640bae3af8294077dee1f\output\AndroidManifest.xml:24:85-109
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] C:\Users\nassim\.android\build-cache\03184af4cc3f4b99e6b640bae3af8294077dee1f\output\AndroidManifest.xml:24:18-84
+activity#com.google.android.gms.tagmanager.TagManagerPreviewActivity
+ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] C:\Users\nassim\.android\build-cache\03184af4cc3f4b99e6b640bae3af8294077dee1f\output\AndroidManifest.xml:25:9-32:20
+	android:noHistory
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] C:\Users\nassim\.android\build-cache\03184af4cc3f4b99e6b640bae3af8294077dee1f\output\AndroidManifest.xml:25:94-118
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] C:\Users\nassim\.android\build-cache\03184af4cc3f4b99e6b640bae3af8294077dee1f\output\AndroidManifest.xml:25:19-93
+intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
+ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] C:\Users\nassim\.android\build-cache\03184af4cc3f4b99e6b640bae3af8294077dee1f\output\AndroidManifest.xml:26:13-31:29
+data
+ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] C:\Users\nassim\.android\build-cache\03184af4cc3f4b99e6b640bae3af8294077dee1f\output\AndroidManifest.xml:27:17-71
+	android:scheme
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] C:\Users\nassim\.android\build-cache\03184af4cc3f4b99e6b640bae3af8294077dee1f\output\AndroidManifest.xml:27:23-69
+action#android.intent.action.VIEW
+ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] C:\Users\nassim\.android\build-cache\03184af4cc3f4b99e6b640bae3af8294077dee1f\output\AndroidManifest.xml:28:17-68
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] C:\Users\nassim\.android\build-cache\03184af4cc3f4b99e6b640bae3af8294077dee1f\output\AndroidManifest.xml:28:25-66
+category#android.intent.category.BROWSABLE
+ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] C:\Users\nassim\.android\build-cache\03184af4cc3f4b99e6b640bae3af8294077dee1f\output\AndroidManifest.xml:30:17-77
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] C:\Users\nassim\.android\build-cache\03184af4cc3f4b99e6b640bae3af8294077dee1f\output\AndroidManifest.xml:30:27-75
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\nassim\.android\build-cache\894e22031f3cf52a0797a60ee812e55a18528f8a\output\AndroidManifest.xml:25:7-26:18
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] C:\Users\nassim\.android\build-cache\e3354c8522edd896bab2e3982f76912b438b24ac\output\AndroidManifest.xml:25:7-26:18
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\nassim\.android\build-cache\894e22031f3cf52a0797a60ee812e55a18528f8a\output\AndroidManifest.xml:25:90-112
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\nassim\.android\build-cache\894e22031f3cf52a0797a60ee812e55a18528f8a\output\AndroidManifest.xml:25:113-137
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\nassim\.android\build-cache\894e22031f3cf52a0797a60ee812e55a18528f8a\output\AndroidManifest.xml:25:17-89
+receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
+ADDED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\nassim\.android\build-cache\894e22031f3cf52a0797a60ee812e55a18528f8a\output\AndroidManifest.xml:27:7-31:18
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\nassim\.android\build-cache\894e22031f3cf52a0797a60ee812e55a18528f8a\output\AndroidManifest.xml:27:162-184
+	android:permission
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\nassim\.android\build-cache\894e22031f3cf52a0797a60ee812e55a18528f8a\output\AndroidManifest.xml:27:105-161
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\nassim\.android\build-cache\894e22031f3cf52a0797a60ee812e55a18528f8a\output\AndroidManifest.xml:27:17-104
+intent-filter#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\nassim\.android\build-cache\894e22031f3cf52a0797a60ee812e55a18528f8a\output\AndroidManifest.xml:28:11-30:27
+action#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\nassim\.android\build-cache\894e22031f3cf52a0797a60ee812e55a18528f8a\output\AndroidManifest.xml:29:15-76
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\nassim\.android\build-cache\894e22031f3cf52a0797a60ee812e55a18528f8a\output\AndroidManifest.xml:29:23-74
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\nassim\.android\build-cache\894e22031f3cf52a0797a60ee812e55a18528f8a\output\AndroidManifest.xml:32:7-137
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] C:\Users\nassim\.android\build-cache\e3354c8522edd896bab2e3982f76912b438b24ac\output\AndroidManifest.xml:27:7-137
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\nassim\.android\build-cache\894e22031f3cf52a0797a60ee812e55a18528f8a\output\AndroidManifest.xml:32:88-110
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\nassim\.android\build-cache\894e22031f3cf52a0797a60ee812e55a18528f8a\output\AndroidManifest.xml:32:111-135
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] C:\Users\nassim\.android\build-cache\894e22031f3cf52a0797a60ee812e55a18528f8a\output\AndroidManifest.xml:32:16-87
+permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\nassim\.android\build-cache\b36ed08241dfd5ed11e58cf1ffbacbdc216e0f92\output\AndroidManifest.xml:24:5-109
+	android:protectionLevel
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\nassim\.android\build-cache\b36ed08241dfd5ed11e58cf1ffbacbdc216e0f92\output\AndroidManifest.xml:24:72-107
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\nassim\.android\build-cache\b36ed08241dfd5ed11e58cf1ffbacbdc216e0f92\output\AndroidManifest.xml:24:17-71
+uses-permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\nassim\.android\build-cache\b36ed08241dfd5ed11e58cf1ffbacbdc216e0f92\output\AndroidManifest.xml:26:5-78
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\nassim\.android\build-cache\b36ed08241dfd5ed11e58cf1ffbacbdc216e0f92\output\AndroidManifest.xml:26:22-76
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\nassim\.android\build-cache\b36ed08241dfd5ed11e58cf1ffbacbdc216e0f92\output\AndroidManifest.xml:30:9-36:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\nassim\.android\build-cache\b36ed08241dfd5ed11e58cf1ffbacbdc216e0f92\output\AndroidManifest.xml:30:85-108
+	android:permission
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\nassim\.android\build-cache\b36ed08241dfd5ed11e58cf1ffbacbdc216e0f92\output\AndroidManifest.xml:30:109-169
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\nassim\.android\build-cache\b36ed08241dfd5ed11e58cf1ffbacbdc216e0f92\output\AndroidManifest.xml:30:19-84
+intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION
+ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\nassim\.android\build-cache\b36ed08241dfd5ed11e58cf1ffbacbdc216e0f92\output\AndroidManifest.xml:31:13-35:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\nassim\.android\build-cache\b36ed08241dfd5ed11e58cf1ffbacbdc216e0f92\output\AndroidManifest.xml:32:17-80
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\nassim\.android\build-cache\b36ed08241dfd5ed11e58cf1ffbacbdc216e0f92\output\AndroidManifest.xml:32:25-78
+action#com.google.android.c2dm.intent.REGISTRATION
+ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\nassim\.android\build-cache\b36ed08241dfd5ed11e58cf1ffbacbdc216e0f92\output\AndroidManifest.xml:33:17-85
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\nassim\.android\build-cache\b36ed08241dfd5ed11e58cf1ffbacbdc216e0f92\output\AndroidManifest.xml:33:25-83
+category#${applicationId}
+ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\nassim\.android\build-cache\b36ed08241dfd5ed11e58cf1ffbacbdc216e0f92\output\AndroidManifest.xml:34:17-60
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\nassim\.android\build-cache\b36ed08241dfd5ed11e58cf1ffbacbdc216e0f92\output\AndroidManifest.xml:34:27-58
+receiver#com.google.firebase.iid.FirebaseInstanceIdInternalReceiver
+ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\nassim\.android\build-cache\b36ed08241dfd5ed11e58cf1ffbacbdc216e0f92\output\AndroidManifest.xml:40:9-119
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\nassim\.android\build-cache\b36ed08241dfd5ed11e58cf1ffbacbdc216e0f92\output\AndroidManifest.xml:40:93-117
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\nassim\.android\build-cache\b36ed08241dfd5ed11e58cf1ffbacbdc216e0f92\output\AndroidManifest.xml:40:19-92
+service#com.google.firebase.iid.FirebaseInstanceIdService
+ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\nassim\.android\build-cache\b36ed08241dfd5ed11e58cf1ffbacbdc216e0f92\output\AndroidManifest.xml:44:9-48:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\nassim\.android\build-cache\b36ed08241dfd5ed11e58cf1ffbacbdc216e0f92\output\AndroidManifest.xml:44:83-106
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\nassim\.android\build-cache\b36ed08241dfd5ed11e58cf1ffbacbdc216e0f92\output\AndroidManifest.xml:44:18-82
+intent-filter#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\nassim\.android\build-cache\b36ed08241dfd5ed11e58cf1ffbacbdc216e0f92\output\AndroidManifest.xml:45:13-47:29
+	android:priority
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\nassim\.android\build-cache\b36ed08241dfd5ed11e58cf1ffbacbdc216e0f92\output\AndroidManifest.xml:45:28-51
+action#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\nassim\.android\build-cache\b36ed08241dfd5ed11e58cf1ffbacbdc216e0f92\output\AndroidManifest.xml:46:17-79
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] C:\Users\nassim\.android\build-cache\b36ed08241dfd5ed11e58cf1ffbacbdc216e0f92\output\AndroidManifest.xml:46:25-77
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:10.2.0] C:\Users\nassim\.android\build-cache\412087c91b105b401faeda4b4f4ae153db2792a1\output\AndroidManifest.xml:6:9-194
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:10.2.0] C:\Users\nassim\.android\build-cache\412087c91b105b401faeda4b4f4ae153db2792a1\output\AndroidManifest.xml:6:19-78
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:10.2.0] C:\Users\nassim\.android\build-cache\412087c91b105b401faeda4b4f4ae153db2792a1\output\AndroidManifest.xml:6:144-168
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:10.2.0] C:\Users\nassim\.android\build-cache\412087c91b105b401faeda4b4f4ae153db2792a1\output\AndroidManifest.xml:6:169-192
+	android:name
+		ADDED from [com.google.firebase:firebase-common:10.2.0] C:\Users\nassim\.android\build-cache\412087c91b105b401faeda4b4f4ae153db2792a1\output\AndroidManifest.xml:6:79-143
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:10.2.0] C:\Users\nassim\.android\build-cache\a9e571a268c4eafa983e7ff3f7e1ce87d9b05136\output\AndroidManifest.xml:21:5-77
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:10.2.0] C:\Users\nassim\.android\build-cache\a9e571a268c4eafa983e7ff3f7e1ce87d9b05136\output\AndroidManifest.xml:21:19-51
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:10.2.0] C:\Users\nassim\.android\build-cache\a9e571a268c4eafa983e7ff3f7e1ce87d9b05136\output\AndroidManifest.xml:21:52-75
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:10.2.0] C:\Users\nassim\.android\build-cache\0c86e3c52284cfb71dc53cd0f08b24b2dcfc3e3f\output\AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:10.2.0] C:\Users\nassim\.android\build-cache\0c86e3c52284cfb71dc53cd0f08b24b2dcfc3e3f\output\AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:10.2.0] C:\Users\nassim\.android\build-cache\0c86e3c52284cfb71dc53cd0f08b24b2dcfc3e3f\output\AndroidManifest.xml:19:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:10.2.0] C:\Users\nassim\.android\build-cache\0c86e3c52284cfb71dc53cd0f08b24b2dcfc3e3f\output\AndroidManifest.xml:19:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:10.2.0] C:\Users\nassim\.android\build-cache\e2e76148a9232e5d11cc6fb2a59a494bcc370cd0\output\AndroidManifest.xml:20:9-121
+MERGED from [com.google.maps.android:android-maps-utils:0.4] C:\Users\nassim\.android\build-cache\8183011d82291147a223f0de92035bd9f2b8cdec\output\AndroidManifest.xml:8:9-10:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:10.2.0] C:\Users\nassim\.android\build-cache\e2e76148a9232e5d11cc6fb2a59a494bcc370cd0\output\AndroidManifest.xml:20:66-119
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:10.2.0] C:\Users\nassim\.android\build-cache\e2e76148a9232e5d11cc6fb2a59a494bcc370cd0\output\AndroidManifest.xml:20:20-65
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:25.3.0] C:\Users\nassim\.android\build-cache\92e9c37ee2fe0b9fc162e8ec3cb929d265706303\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:recyclerview-v7:25.3.0] C:\Users\nassim\.android\build-cache\4eebc94754b3f11296c79bc20c28d9c08acfef3c\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.0] C:\Users\nassim\.android\build-cache\a4103c7413a92064631b7fcbd46db305f43b82a8\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:appcompat-v7:25.3.0] C:\Users\nassim\.android\build-cache\e802dc3c1010299652e8d299dd9d3fe2b6dd8731\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.0] C:\Users\nassim\.android\build-cache\f26f51fff1790a5831f9487d812026cbb7024c28\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.0] C:\Users\nassim\.android\build-cache\409f7bb31faf05e906a6eff84b9f778a274d2381\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.0] C:\Users\nassim\.android\build-cache\70467a8f5e4b8342b6c867e6d42cba0ab2ede63a\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.0] C:\Users\nassim\.android\build-cache\9bffb9d00837ac617d6bb1647a7bebbac2451501\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.0] C:\Users\nassim\.android\build-cache\399c9534b10ef3f78b23650237cc29f34ce38648\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.0] C:\Users\nassim\.android\build-cache\7280c597033248b817512c80526530a35f0cc371\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.0] C:\Users\nassim\.android\build-cache\29ed5c098d5235c8aeade7e1a785aacdff01928b\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-compat:25.3.0] C:\Users\nassim\.android\build-cache\2bb59c0e738cb78c6b54560c0b9aa3f0d2a19035\output\AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:design:25.3.0] C:\Users\nassim\.android\build-cache\92e9c37ee2fe0b9fc162e8ec3cb929d265706303\output\AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:design:25.3.0] C:\Users\nassim\.android\build-cache\92e9c37ee2fe0b9fc162e8ec3cb929d265706303\output\AndroidManifest.xml:26:9-47
